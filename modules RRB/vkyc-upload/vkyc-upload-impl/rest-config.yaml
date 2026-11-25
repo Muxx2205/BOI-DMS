@@ -1,0 +1,9 @@
+apiDir: "../vkyc-upload-api/src/main/java"
+apiPackagePath: "com.boi.headless.rest.vkyc"
+application:
+    baseURI: "/vkyc-upload"
+    className: "VkycUploadApplication"
+    name: "VkycUpload"
+author: "shehn"
+clientDir: "../vkyc-upload-client/src/main/java"
+testDir: "../vkyc-upload-test/src/testIntegration/java"

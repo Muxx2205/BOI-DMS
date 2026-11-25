@@ -1,0 +1,9 @@
+apiDir: "../rrb-consent-headless-delivery-api/src/main/java"
+apiPackagePath: "com.boi.headless.rest.rrb.consent"
+application:
+    baseURI: "/rrb-consent-headless-delivery"
+    className: "RrbConsentHeadlessDeliveryApplication"
+    name: "RrbConsentHeadlessDelivery"
+author: "shehn"
+clientDir: "../rrb-consent-headless-delivery-client/src/main/java"
+testDir: "../rrb-consent-headless-delivery-test/src/testIntegration/java"

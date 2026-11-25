@@ -1,0 +1,9 @@
+apiDir: "../dde-status-api-api/src/main/java"
+apiPackagePath: "com.vls.status.api"
+application:
+    baseURI: "/dde-status-api"
+    className: "DdeStatusApiApplication"
+    name: "DdeStatusApi"
+author: "shehn"
+clientDir: "../dde-status-api-client/src/main/java"
+testDir: "../dde-status-api-test/src/testIntegration/java"

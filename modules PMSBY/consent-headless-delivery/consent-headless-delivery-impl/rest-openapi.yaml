@@ -1,0 +1,319 @@
+info:
+    description: "Consent Headless REST API for PMJJBY/PMSBY Document Management"
+    license:
+        name: "Apache 2.0"
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+    title: "ConsentHeadlessDelivery"
+    version: v1.0
+openapi: 3.0.1
+paths:
+  # ==================== CBS API 1: Metadata Push ====================
+  /cbs/consent/metadata-push:
+    post:
+      operationId: pushConsentMetadata
+      tags:
+        - Consent
+      summary: "CBS pushes consent metadata to Liferay"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CBSMetadataRequest"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/CBSMetadataRequest"
+      responses:
+        200:
+          description: "Success"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConsentResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/ConsentResponse"
+
+  # ==================== CBS API 2: Check Document Status ====================
+  /cbs/consent/check-status:
+    get:
+      operationId: checkDocumentStatus
+      tags:
+        - Consent
+      summary: "CBS checks if document is verified in DMS"
+      parameters:
+        - name: cbsReferenceNumber
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: "Success"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StatusCheckResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/StatusCheckResponse"
+
+  # ==================== CBS API 3: Update URN ====================
+  /cbs/consent/update-urn:
+    post:
+      operationId: updateURN
+      tags:
+        - Consent
+      summary: "CBS updates URN after verification"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/URNUpdateRequest"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/URNUpdateRequest"
+      responses:
+        200:
+          description: "Success"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConsentResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/ConsentResponse"
+
+  # ==================== Frontend APIs (Same as PMSBY) ====================
+  /consent/records:
+    get:
+      operationId: getConsentRecords
+      tags:
+        - Consent
+      summary: "Get all consent records for frontend"
+      parameters:
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: filter
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: "Success"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /consent/record/{id}:
+    get:
+      operationId: getConsentRecord
+      tags:
+        - Consent
+      summary: "Get single consent record by ID"
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: "Success"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /add-consent/saveAsDraft:
+    post:
+      operationId: addConsentAsDraft
+      tags:
+        - Consent
+      summary: "Save consent record as draft with document upload"
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                entryId:
+                  type: integer
+                  format: int64
+                cbsReferenceNumber:
+                  type: string
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: "Success"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /add-consent/saveAsExport:
+    post:
+      operationId: addConsentAsExport
+      tags:
+        - Consent
+      summary: "Submit/Approve/Reject consent record"
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                entryId:
+                  type: integer
+                  format: int64
+                transitionId:
+                  type: string
+                remarks:
+                  type: string
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: "Success"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+components:
+  schemas:
+    BOIHeadlessResponse:
+      type: object
+      properties:
+        responseId:
+          type: integer
+        responseStatus:
+          type: string
+
+    ConsentResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        entryId:
+          type: integer
+          format: int64
+        cbsReferenceNumber:
+          type: string
+        documentReferenceNo:
+          type: string
+        stage:
+          type: integer
+        message:
+          type: string
+
+    StatusCheckResponse:
+      type: object
+      properties:
+        documentVerified:
+          type: boolean
+        documentReferenceNo:
+          type: string
+        stage:
+          type: integer
+        message:
+          type: string
+
+    CBSMetadataRequest:
+      type: object
+      required:
+        - cbsReferenceNumber
+        - accountNumber
+        - customerName
+        - branchCode
+        - typeOfInsurance
+      properties:
+        cbsReferenceNumber:
+          type: string
+        accountNumber:
+          type: string
+        branch:
+          type: string
+        branchCode:
+          type: string
+        customerId:
+          type: string
+        customerName:
+          type: string
+        consentFormDocumentFrom:
+          type: string
+          description: "Document start page number"
+        consentFormDocumentTo:
+          type: string
+          description: "Document end page number"
+        nBGCode:
+          type: string
+        solId:
+          type: string
+        typeOfInsurance:
+          type: string
+        transDate:
+          type: string
+          description: "Transaction date (format: yyyy-MM-dd)"
+        urn:
+          type: string
+        year:
+          type: string
+        zone:
+          type: string
+
+    URNUpdateRequest:
+      type: object
+      required:
+        - cbsReferenceNumber
+        - urn
+        - status
+      properties:
+        cbsReferenceNumber:
+          type: string
+        urn:
+          type: string
+        status:
+          type: string
+          description: "Status: APPROVED, REJECTED, or DELETED"
+        transDate:
+          type: string
+          description: "Transaction date (optional, format: yyyy-MM-dd)"

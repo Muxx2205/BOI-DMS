@@ -1,0 +1,3 @@
+Bundle-Name: consent-headless-delivery-client
+Bundle-SymbolicName: com.boi.headless.rest.consent.client
+Bundle-Version: 1.0.0

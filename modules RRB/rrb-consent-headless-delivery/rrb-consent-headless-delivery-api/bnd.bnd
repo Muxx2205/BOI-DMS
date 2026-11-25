@@ -1,0 +1,9 @@
+Bundle-Name: rrb-consent-headless-delivery-api
+Bundle-SymbolicName: com.boi.headless.rest.rrb.consent.api
+Bundle-Version: 1.0.0
+
+Export-Package: \
+    com.boi.headless.rest.rrb.consent.dto.v1_0,\
+    com.boi.headless.rest.rrb.consent.resource.v1_0
+
+Import-Package: *

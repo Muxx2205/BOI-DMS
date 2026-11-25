@@ -1,0 +1,5 @@
+Bundle-Name: pmsby-headless-delivery-test
+Bundle-SymbolicName: com.boi.headless.rest.pmsby.test
+Bundle-Version: 1.0.0
+-includeresource: com.boi.headless.rest.pmsby.client.jar=../pmsby-headless-delivery-client/build/libs/com.boi.headless.rest.pmsby.client-1.0.0.jar;lib:=true
+-provider-policy: ${replacestring;${range;[==,==]};.*,(.*)];$1}

@@ -1,0 +1,8 @@
+Bundle-Name: vkyc-upload-api
+Bundle-SymbolicName: com.boi.headless.rest.vkyc.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.boi.headless.rest.vkyc.dto.v1_0,\
+	com.boi.headless.rest.vkyc.resource.v1_0
+
+Import-Package: *

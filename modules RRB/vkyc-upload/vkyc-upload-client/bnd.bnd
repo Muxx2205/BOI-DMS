@@ -1,0 +1,3 @@
+Bundle-Name: vkyc-upload-client
+Bundle-SymbolicName: com.boi.headless.rest.vkyc.client
+Bundle-Version: 1.0.0

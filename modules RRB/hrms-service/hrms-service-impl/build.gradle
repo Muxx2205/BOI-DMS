@@ -1,0 +1,7 @@
+dependencies {
+	api project(":modules:hrms-service:hrms-service-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+group = "com.vigilance.hrms"

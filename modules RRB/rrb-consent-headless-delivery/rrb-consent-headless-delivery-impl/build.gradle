@@ -1,0 +1,13 @@
+dependencies {
+	api project(":modules:rrb-consent-headless-delivery:rrb-consent-headless-delivery-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+	implementation project(":modules:boi-headless-delivery-rrb-common")
+	
+	restBuilder group: "com.liferay", name: "com.liferay.portal.tools.rest.builder", version: "1.0.222"
+	compileOnly group: "com.liferay", name: "com.liferay.portal.search.api", version: "2.0.0"
+    compileOnly group: "jakarta.ws.rs", name: "jakarta.ws.rs-api", version: "3.0.0"
+    compileOnly group: "jakarta.servlet", name: "jakarta.servlet-api", version: "5.0.0"
+}
+
+group = "com.boi.headless.rest.rrb.consent"

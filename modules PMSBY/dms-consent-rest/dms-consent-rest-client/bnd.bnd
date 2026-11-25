@@ -1,0 +1,3 @@
+Bundle-Name: dms-consent-rest-client
+Bundle-SymbolicName: com.boi.headless.rest.dms.client
+Bundle-Version: 1.0.0

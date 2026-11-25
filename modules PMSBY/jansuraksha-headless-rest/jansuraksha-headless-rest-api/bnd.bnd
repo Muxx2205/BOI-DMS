@@ -1,0 +1,6 @@
+Bundle-Name: jansuraksha-headless-rest-api
+Bundle-SymbolicName: com.boi.headless.rest.jansuraksha.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.boi.headless.rest.jansuraksha.dto.v1_0,\
+	com.boi.headless.rest.jansuraksha.resource.v1_0

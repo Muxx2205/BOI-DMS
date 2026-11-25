@@ -1,0 +1,5 @@
+Bundle-Name: dms-consent-rest-test
+Bundle-SymbolicName: com.boi.headless.rest.dms.test
+Bundle-Version: 1.0.0
+-includeresource: com.boi.headless.rest.dms.client.jar=../dms-consent-rest-client/build/libs/com.boi.headless.rest.dms.client-1.0.0.jar;lib:=true
+-provider-policy: ${replacestring;${range;[==,==]};.*,(.*)];$1}

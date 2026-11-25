@@ -1,0 +1,9 @@
+apiDir: "../dms-jansuraksha-rest-api/src/main/java"
+apiPackagePath: "com.boi.headless.rest.consent"
+application:
+    baseURI: "/dms-jansuraksha-rest"
+    className: "DmsJansurakshaRestApplication"
+    name: "DmsJansurakshaRest"
+author: "shehn"
+clientDir: "../dms-jansuraksha-rest-client/src/main/java"
+testDir: "../dms-jansuraksha-rest-test/src/testIntegration/java"

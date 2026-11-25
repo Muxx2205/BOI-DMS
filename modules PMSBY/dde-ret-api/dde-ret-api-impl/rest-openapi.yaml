@@ -1,0 +1,197 @@
+info:
+    description: "DdeRetApi REST API"
+    license:
+        name: "Apache 2.0"
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+    title: "DdeRetApi"
+    version: v1.0
+openapi: 3.0.1
+
+paths:
+  /return:
+    post:
+      operationId: postDdeReturn
+      summary: Receives signed documents and returns status
+      tags:
+        - DdeReturn
+      parameters:
+        - name: txnID
+          in: header
+          required: true
+          description: "Unique transaction identifier used for the initial DDE transaction."
+          schema:
+            type: string
+            minLength: 5
+            maxLength: 50
+      requestBody:
+        required: true
+        description: "A list of signed documents returned as a JSON array."
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "#/components/schemas/DdeReturnRequest"
+            examples:
+              sample:
+                value:
+                  - docId: 1
+                    uin: "FRFGT1000Y"
+                    reltocntrct: "Debtor"
+                    signedDocData: "Base64SignedDocument"
+                    signatoryName: "Signer name in JSON"
+                    signedName: "Aadhar name"
+                    matchPercentage: 45
+                    branchCode: "1234"
+                    branch: "Mumbai Main Branch"
+                    zone: "West Zone"
+                    nbgCode: "NBG_WEST"
+                  - docId: 2
+                    uin: "UJYHY2000Y"
+                    reltocntrct: "Co-obligant"
+                    signedDocData: "Base64SignedDocument"
+                    signatoryName: "Signer name in JSON"
+                    signedName: "Aadhar name"
+                    matchPercentage: 92
+                    branchCode: "5678"
+                    branch: "Pune Branch"
+                    zone: "West Zone"
+                    nbgCode: "NBG_WEST"
+          application/xml:
+            schema:
+              type: array
+              items:
+                $ref: "#/components/schemas/DdeReturnRequest"
+
+      responses:
+        "200":
+          description: "Success - Documents received successfully (statusCode 001)"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DdeReturnResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/DdeReturnResponse"
+        "400":
+          description: "Bad Request (statusCode 002: txnID not found, 003: Invalid Base64, 004: Missing required fields)"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DdeReturnResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/DdeReturnResponse"
+        "401":
+          description: "Unauthorized - Missing or invalid credentials"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DdeReturnResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/DdeReturnResponse"
+        "403":
+          description: "Forbidden - User does not have required role (Nesldde) or is not Administrator"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DdeReturnResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/DdeReturnResponse"
+        "405":
+          description: "Method Not Allowed - Only POST is allowed"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DdeReturnResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/DdeReturnResponse"
+        "409":
+          description: "Conflict (Duplicate txnID found)"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DdeReturnResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/DdeReturnResponse"
+        "500":
+          description: "Internal Server Error (statusCode 005: Object definition not found, 009: Persistence/storage error)"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DdeReturnResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/DdeReturnResponse"
+
+components:
+  schemas:
+    DdeReturnRequest:
+      type: object
+      required:
+        - docId
+        - uin
+        - reltocntrct
+        - signedDocData
+        - signatoryName
+        - signedName
+        - matchPercentage
+        - branchCode
+      properties:
+        docId:
+          type: integer
+          description: "Document reference ID passed in the DDE API request."
+        uin:
+          type: string
+          description: "Unique Identification Number passed in the DDE API request."
+          minLength: 5
+          maxLength: 20
+        reltocntrct:
+          type: string
+          description: "Relation to the contract (e.g., Debtor, Co-obligant)."
+        signedDocData:
+          type: string
+          description: "Base64 value of the signed document."
+        signatoryName:
+          type: string
+          description: "Signer name that was passed in the initial JSON."
+        signedName:
+          type: string
+          description: "Aadhaar name of the person who signed the document."
+        matchPercentage:
+          type: integer
+          format: int32
+          description: "Percentage matched between the signer and signed name."
+          minimum: 0
+          maximum: 100
+        branchCode:
+          type: string
+          description: "Branch code - first 4 digits are extracted to resolve branch hierarchy."
+          minLength: 4
+          maxLength: 20
+        branch:
+          type: string
+          description: "Branch name (optional - auto-resolved from Organization if not provided)."
+        zone:
+          type: string
+          description: "Zone name (optional - auto-resolved from Organization if not provided)."
+        nbgCode:
+          type: string
+          description: "NBG code (optional - auto-resolved from Organization if not provided)."
+
+    DdeReturnResponse:
+      type: object
+      properties:
+        txnID:
+          type: string
+          description: "The transaction ID provided in the request header."
+        status:
+          type: string
+          description: "A human-readable status description."
+        statusCode:
+          type: string
+          description: "Status codes: 001 (Success), 002 (txnID not found), 003 (Invalid Base64), 004 (Missing fields), 401 (Unauthorized), 403 (Forbidden), 005-009 (Internal errors)."

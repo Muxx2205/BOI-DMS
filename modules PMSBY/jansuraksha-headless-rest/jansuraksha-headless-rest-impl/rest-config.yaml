@@ -1,0 +1,9 @@
+apiDir: "../jansuraksha-headless-rest-api/src/main/java"
+apiPackagePath: "com.boi.headless.rest.jansuraksha"
+application:
+    baseURI: "/jansuraksha-headless-rest"
+    className: "JansurakshaHeadlessRestApplication"
+    name: "JansurakshaHeadlessRest"
+author: "shehn"
+clientDir: "../jansuraksha-headless-rest-client/src/main/java"
+testDir: "../jansuraksha-headless-rest-test/src/testIntegration/java"

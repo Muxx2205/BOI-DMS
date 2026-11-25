@@ -1,0 +1,10 @@
+dependencies {
+	api project(":modules:pmsby-headless-delivery:pmsby-headless-delivery-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+	implementation project(":modules:boi-headless-delivery-common")
+	
+	restBuilder group: "com.liferay", name: "com.liferay.portal.tools.rest.builder", version: "1.0.222"
+}
+
+group = "com.boi.headless.rest.pmsby"

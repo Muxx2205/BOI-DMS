@@ -1,0 +1,6 @@
+Bundle-Name: hrms-service-api
+Bundle-SymbolicName: com.vigilance.hrms.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.vigilance.hrms.dto.v1_0,\
+	com.vigilance.hrms.resource.v1_0

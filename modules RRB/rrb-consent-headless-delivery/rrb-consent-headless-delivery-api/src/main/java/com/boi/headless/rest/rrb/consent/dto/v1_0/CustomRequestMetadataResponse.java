@@ -1,0 +1,35 @@
+package com.boi.headless.rest.rrb.consent.dto.v1_0;
+
+import com.liferay.portal.kernel.json.JSONFactoryUtil;
+import com.liferay.portal.kernel.json.JSONObject;
+
+import jakarta.ws.rs.core.Response.Status;
+
+public class CustomRequestMetadataResponse extends RequestMetadataResponse {
+    
+    private static final long serialVersionUID = 1L;
+    
+    private JSONObject data = JSONFactoryUtil.createJSONObject();
+
+    public CustomRequestMetadataResponse(JSONObject data, Status status) {
+        try {
+            super.setResponseId(status.getStatusCode());
+            super.setResponseStatus(status.getReasonPhrase());
+            this.data = data;
+        } catch (Exception e) {
+        }
+    }
+
+    public JSONObject getData() {
+        return data;
+    }
+
+    public void setData(JSONObject data) {
+        this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        return "CustomRequestMetadataResponse [data=" + data + "]";
+    }
+}

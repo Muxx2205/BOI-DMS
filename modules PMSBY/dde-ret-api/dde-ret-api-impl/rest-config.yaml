@@ -1,0 +1,9 @@
+apiDir: "../dde-ret-api-api/src/main/java"
+apiPackagePath: "com.vls.dde.ret.api"
+application:
+    baseURI: "/dde-ret-api"
+    className: "DdeRetApiApplication"
+    name: "DdeRetApi"
+author: "shehn"
+clientDir: "../dde-ret-api-client/src/main/java"
+testDir: "../dde-ret-api-test/src/testIntegration/java"

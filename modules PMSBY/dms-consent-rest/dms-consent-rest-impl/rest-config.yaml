@@ -1,0 +1,9 @@
+apiDir: "../dms-consent-rest-api/src/main/java"
+apiPackagePath: "com.boi.headless.rest.dms"
+application:
+    baseURI: "/dms-consent-rest"
+    className: "DmsConsentRestApplication"
+    name: "DmsConsentRest"
+author: "shehn"
+clientDir: "../dms-consent-rest-client/src/main/java"
+testDir: "../dms-consent-rest-test/src/testIntegration/java"

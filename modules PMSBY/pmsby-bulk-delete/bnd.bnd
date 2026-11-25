@@ -1,0 +1,7 @@
+Bundle-Name: pmsby-bulk-delete
+Bundle-SymbolicName: pmsby.bulk.delete
+Bundle-Version: 1.0.0
+Export-Package: pmsby.bulk.delete.constants
+Provide-Capability:\
+	liferay.language.resources;\
+		resource.bundle.base.name="content.Language"

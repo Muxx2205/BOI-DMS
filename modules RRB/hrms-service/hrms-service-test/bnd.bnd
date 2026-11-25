@@ -1,0 +1,5 @@
+Bundle-Name: hrms-service-test
+Bundle-SymbolicName: com.vigilance.hrms.test
+Bundle-Version: 1.0.0
+-includeresource: com.vigilance.hrms.client.jar=../hrms-service-client/build/libs/com.vigilance.hrms.client-1.0.0.jar;lib:=true
+-provider-policy: ${replacestring;${range;[==,==]};.*,(.*)];$1}

@@ -1,0 +1,9 @@
+apiDir: "../hrms-service-api/src/main/java"
+apiPackagePath: "com.vigilance.hrms"
+application:
+    baseURI: "/hrms-service"
+    className: "HrmsServiceApplication"
+    name: "HrmsService"
+author: "shehn"
+clientDir: "../hrms-service-client/src/main/java"
+testDir: "../hrms-service-test/src/testIntegration/java"

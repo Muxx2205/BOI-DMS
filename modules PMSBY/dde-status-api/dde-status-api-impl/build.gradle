@@ -1,0 +1,7 @@
+dependencies {
+	api project(":modules:dde-status-api:dde-status-api-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+}
+
+group = "com.vls.status.api"

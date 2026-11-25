@@ -1,0 +1,6 @@
+Bundle-Name: dde-ret-api-api
+Bundle-SymbolicName: com.vls.dde.ret.api.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.vls.dde.ret.api.dto.v1_0,\
+	com.vls.dde.ret.api.resource.v1_0

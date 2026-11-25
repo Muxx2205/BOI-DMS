@@ -1,0 +1,6 @@
+Bundle-Name: pmsby-headless-delivery-api
+Bundle-SymbolicName: com.boi.headless.rest.pmsby.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.boi.headless.rest.pmsby.dto.v1_0,\
+	com.boi.headless.rest.pmsby.resource.v1_0

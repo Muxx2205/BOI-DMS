@@ -1,0 +1,5 @@
+Bundle-Name: dde-ret-api-test
+Bundle-SymbolicName: com.vls.dde.ret.api.test
+Bundle-Version: 1.0.0
+-includeresource: com.vls.dde.ret.api.client.jar=../dde-ret-api-client/build/libs/com.vls.dde.ret.api.client-1.0.0.jar;lib:=true
+-provider-policy: ${replacestring;${range;[==,==]};.*,(.*)];$1}

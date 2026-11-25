@@ -1,0 +1,12 @@
+Bundle-Name: boi-headless-delivery-common
+Bundle-SymbolicName: com.boi.headless.rest.common
+Bundle-Version: 1.0.0
+Liferay-Configuration-Path: /configuration
+Export-Package: \
+	com.boi.headless.rest.common.model,\
+	com.boi.headless.rest.common.application,\
+	com.boi.headless.rest.common.handler,\
+	com.boi.headless.rest.common.validators,\
+	com.boi.headless.rest.common.constants,\
+	com.boi.headless.rest.common.util,\
+	com.boi.headless.rest.common.mail

@@ -1,0 +1,6 @@
+Bundle-Name: dde-status-api-api
+Bundle-SymbolicName: com.vls.status.api.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.vls.status.api.dto.v1_0,\
+	com.vls.status.api.resource.v1_0

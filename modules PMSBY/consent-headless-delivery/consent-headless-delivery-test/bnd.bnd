@@ -1,0 +1,5 @@
+Bundle-Name: consent-headless-delivery-test
+Bundle-SymbolicName: com.boi.headless.rest.consent.test
+Bundle-Version: 1.0.0
+-includeresource: com.boi.headless.rest.consent.client.jar=../consent-headless-delivery-client/build/libs/com.boi.headless.rest.consent.client-1.0.0.jar;lib:=true
+-provider-policy: ${replacestring;${range;[==,==]};.*,(.*)];$1}

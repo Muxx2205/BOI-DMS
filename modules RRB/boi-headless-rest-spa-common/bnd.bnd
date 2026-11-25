@@ -1,0 +1,10 @@
+Bundle-Name: boi-headless-rest-spa-common
+Bundle-SymbolicName: com.boi.headless.rest.spa.common
+Bundle-Version: 1.0.0
+Export-Package: com.boi.headless.rest.spa.common.application,\
+    com.boi.headless.rest.spa.common.constants,\
+    com.boi.headless.rest.spa.common.model,\
+    com.boi.headless.rest.spa.common.validators
+Provide-Capability:\
+	liferay.language.resources;\
+		resource.bundle.base.name="content.Language"

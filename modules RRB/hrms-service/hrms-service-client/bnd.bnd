@@ -1,0 +1,3 @@
+Bundle-Name: hrms-service-client
+Bundle-SymbolicName: com.vigilance.hrms.client
+Bundle-Version: 1.0.0

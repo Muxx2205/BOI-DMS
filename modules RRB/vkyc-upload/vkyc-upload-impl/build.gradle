@@ -1,0 +1,8 @@
+dependencies {
+	api project(":modules:vkyc-upload:vkyc-upload-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+	implementation project(":modules:boi-headless-rest-spa-common")
+}
+
+group = "com.boi.headless.rest.vkyc"

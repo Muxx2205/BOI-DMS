@@ -1,0 +1,4 @@
+Bundle-Name: consent-dashboard-rest
+Bundle-SymbolicName: com.boi.dashboard.rest.consent
+Bundle-Version: 1.0.0
+Liferay-Configuration-Path: /configuration

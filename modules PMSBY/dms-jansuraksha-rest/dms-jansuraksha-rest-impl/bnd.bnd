@@ -1,0 +1,3 @@
+Bundle-Name: dms-jansuraksha-rest-impl
+Bundle-SymbolicName: com.boi.headless.rest.consent.impl
+Bundle-Version: 1.0.0

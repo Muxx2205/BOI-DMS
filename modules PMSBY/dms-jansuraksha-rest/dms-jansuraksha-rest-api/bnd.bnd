@@ -1,0 +1,6 @@
+Bundle-Name: dms-jansuraksha-rest-api
+Bundle-SymbolicName: com.boi.headless.rest.consent.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.boi.headless.rest.consent.dto.v1_0,\
+	com.boi.headless.rest.consent.resource.v1_0

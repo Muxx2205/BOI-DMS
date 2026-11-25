@@ -1,0 +1,283 @@
+info:
+    description: "DMS Consent Management REST API for JanSuraksha Portal"
+    license:
+        name: "Apache 2.0"
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+    title: "DMS Consent Headless Delivery"
+    version: v1.0
+openapi: 3.0.1
+
+paths:
+    /consent/upload:
+        post:
+            operationId: uploadConsent
+            tags:
+                - Consent
+            summary: "Upload consent form as Base64 JSON"
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/ConsentUploadRequest"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/ConsentUploadRequest"
+            responses:
+                200:
+                    description: "Success"
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/ConsentResponse"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/ConsentResponse"
+                400:
+                    description: "Bad Request"
+                500:
+                    description: "Internal Server Error"
+
+    /consent/record/{documentReferenceNo}:
+        get:
+            operationId: getConsentByReference
+            tags:
+                - Consent
+            summary: "Get consent record by document reference number"
+            parameters:
+                - name: documentReferenceNo
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+            responses:
+                200:
+                    description: "Success"
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/ConsentRecordResponse"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/ConsentRecordResponse"
+                404:
+                    description: "Not Found"
+
+    /consent/download/{documentReferenceNo}:
+        get:
+            operationId: downloadDocument
+            tags:
+                - Consent
+            summary: "Download consent document by reference"
+            parameters:
+                - name: documentReferenceNo
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+            responses:
+                200:
+                    description: "File download"
+                    content:
+                        application/octet-stream: {}
+                404:
+                    description: "Not Found"
+
+    /consent/records:
+        get:
+            operationId: getConsentRecords
+            tags:
+                - Consent
+            summary: "Get all consent records with filtering"
+            parameters:
+                - name: search
+                  in: query
+                  required: false
+                  schema:
+                      type: string
+                - name: filter
+                  in: query
+                  required: false
+                  schema:
+                      type: string
+                - name: page
+                  in: query
+                  required: false
+                  schema:
+                      type: integer
+                - name: pageSize
+                  in: query
+                  required: false
+                  schema:
+                      type: integer
+                - name: sort
+                  in: query
+                  required: false
+                  schema:
+                      type: string
+            responses:
+                200:
+                    description: "Success"
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/ConsentRecordsResponse"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/ConsentRecordsResponse"
+
+components:
+    schemas:
+        ConsentUploadRequest:
+            type: object
+            required:
+                - documentBase64
+                - fileName
+                - fileType
+                - metadata
+            properties:
+                documentBase64:
+                    type: string
+                fileName:
+                    type: string
+                fileType:
+                    type: string
+                metadata:
+                    $ref: "#/components/schemas/ConsentMetadata"
+
+        ConsentMetadata:
+            type: object
+            required:
+                - accountHolderName
+                - mobileNumber
+                - bankAccountNo
+                - ifscCode
+                - insuranceType
+                - policyYear
+                - policyIssuanceStatus
+                - transactionDate
+                - documentPushDateTime
+                - documentSentStatus
+                - branchCode
+            properties:
+                accountHolderName:
+                    type: string
+                fatherHusbandName:
+                    type: string
+                address:
+                    type: string
+                city:
+                    type: string
+                district:
+                    type: string
+                state:
+                    type: string
+                pinCode:
+                    type: string
+                mobileNumber:
+                    type: string
+                bankAccountNo:
+                    type: string
+                ifscCode:
+                    type: string
+                customerId:
+                    type: string
+                occupation:
+                    type: string
+                kycDocumentName:
+                    type: string
+                kycIdNumber:
+                    type: string
+                panNumber:
+                    type: string
+                aadhaarNumber:
+                    type: string
+                dateOfBirth:
+                    type: string
+                    format: date
+                emailId:
+                    type: string
+                nomineeName:
+                    type: string
+                nomineeAddress:
+                    type: string
+                nomineeDob:
+                    type: string
+                    format: date
+                nomineeRelation:
+                    type: string
+                guardianName:
+                    type: string
+                guardianAddress:
+                    type: string
+                guardianRelation:
+                    type: string
+                guardianMobile:
+                    type: string
+                guardianEmail:
+                    type: string
+                urn:
+                    type: string
+                insuranceType:
+                    type: string
+                    enum: [PMJJBY, PMSBY]
+                policyYear:
+                    type: string
+                policyIssuanceStatus:
+                    type: string
+                    enum: [success, failed]
+                transactionDate:
+                    type: string
+                    format: date-time
+                documentPushDateTime:
+                    type: string
+                    format: date-time
+                documentReferenceNo:
+                    type: string
+                documentSentStatus:
+                    type: string
+                    enum: [success, failed]
+                branchCode:
+                    type: string
+
+        ConsentResponse:
+            type: object
+            properties:
+                status:
+                    type: string
+                    enum: [Success, Failed]
+                documentReferenceNo:
+                    type: string
+                message:
+                    type: string
+
+        ConsentRecordResponse:
+            type: object
+            properties:
+                documentReferenceNo:
+                    type: string
+                fileEntryId:
+                    type: integer
+                    format: int64
+                stage:
+                    type: integer
+                status:
+                    type: string
+                metadata:
+                    $ref: "#/components/schemas/ConsentMetadata"
+                downloadUrl:
+                    type: string
+
+        ConsentRecordsResponse:
+            type: object
+            properties:
+                consentRecordResponses:
+                    type: array
+                    items:
+                        $ref: "#/components/schemas/ConsentRecordResponse"
+                totalCount:
+                    type: integer
+                page:
+                    type: integer
+                pageSize:
+                    type: integer

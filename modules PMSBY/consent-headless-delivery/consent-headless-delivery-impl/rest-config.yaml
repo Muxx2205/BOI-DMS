@@ -1,0 +1,9 @@
+apiDir: "../consent-headless-delivery-api/src/main/java"
+apiPackagePath: "com.boi.headless.rest.consent"
+application:
+    baseURI: "/consent-headless-delivery"
+    className: "ConsentHeadlessDeliveryApplication"
+    name: "ConsentHeadlessDelivery"
+author: "shehn"
+clientDir: "../consent-headless-delivery-client/src/main/java"
+testDir: "../consent-headless-delivery-test/src/testIntegration/java"

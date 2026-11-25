@@ -1,0 +1,3 @@
+Bundle-Name: hrms-service-impl
+Bundle-SymbolicName: com.vigilance.hrms.impl
+Bundle-Version: 1.0.0

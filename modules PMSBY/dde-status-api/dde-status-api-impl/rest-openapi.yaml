@@ -1,0 +1,122 @@
+info:
+    description: "DdeStatusApi REST API"
+    license:
+        name: "Apache 2.0"
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+    title: "DdeStatusApi"
+    version: v1.0
+openapi: 3.0.1
+
+paths:
+  /push-status:
+    post:
+      operationId: postDdePushStatus
+      summary: "Checks whether SDV documents were successfully pushed to DMS. If not present, calls Loan Doc Data API internally."
+      tags:
+        - DdePushStatus
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DdePushStatusRequest"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/DdePushStatusRequest"
+      responses:
+        "200":
+          description: "Success response from DMS or Loan Doc Data API"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DdePushStatusResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/DdePushStatusResponse"
+        "404":
+          description: "Document not found in DMS, fallback triggered"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DdePushStatusResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/DdePushStatusResponse"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DdePushStatusResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/DdePushStatusResponse"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DdePushStatusResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/DdePushStatusResponse"
+
+components:
+  schemas:
+    DdePushStatusRequest:
+      type: object
+      required:
+        - transId
+        - digisign
+      properties:
+        transId:
+          type: string
+        loanno:
+          type: string
+        snctnno:
+          type: string
+        digisign:
+          type: string
+
+    DdePushStatusResponse:
+      type: object
+      required:
+        - transId
+        - statusCode
+        - statusMsg
+      properties:
+        transId:
+          type: string
+        loanno:
+          type: string
+        snctnno:
+          type: string
+        statusCode:
+          type: string
+        statusMsg:
+          type: string
+        docDate:
+          type: string
+
+    LoanDocDataRequest:
+      type: object
+      required:
+        - transId
+        - digisign
+      properties:
+        transId:
+          type: string
+        loanno:
+          type: string
+        digisign:
+          type: string
+
+    LoanDocDataResponse:
+      type: object
+      properties:
+        cipherText:
+          type: string
+        sessionId:
+          type: string
+        digisign:
+          type: string

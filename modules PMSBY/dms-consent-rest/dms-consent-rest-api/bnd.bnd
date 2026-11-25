@@ -1,0 +1,6 @@
+Bundle-Name: dms-consent-rest-api
+Bundle-SymbolicName: com.boi.headless.rest.dms.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.boi.headless.rest.dms.dto.v1_0,\
+	com.boi.headless.rest.dms.resource.v1_0

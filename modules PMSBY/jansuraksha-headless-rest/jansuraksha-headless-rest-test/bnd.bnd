@@ -1,0 +1,5 @@
+Bundle-Name: jansuraksha-headless-rest-test
+Bundle-SymbolicName: com.boi.headless.rest.jansuraksha.test
+Bundle-Version: 1.0.0
+-includeresource: com.boi.headless.rest.jansuraksha.client.jar=../jansuraksha-headless-rest-client/build/libs/com.boi.headless.rest.jansuraksha.client-1.0.0.jar;lib:=true
+-provider-policy: ${replacestring;${range;[==,==]};.*,(.*)];$1}

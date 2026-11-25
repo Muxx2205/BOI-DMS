@@ -1,0 +1,9 @@
+apiDir: "../pmsby-headless-delivery-api/src/main/java"
+apiPackagePath: "com.boi.headless.rest.pmsby"
+application:
+    baseURI: "/pmsby-headless-delivery"
+    className: "PmsbyHeadlessDeliveryApplication"
+    name: "PmsbyHeadlessDelivery"
+author: "shehn"
+clientDir: "../pmsby-headless-delivery-client/src/main/java"
+testDir: "../pmsby-headless-delivery-test/src/testIntegration/java"

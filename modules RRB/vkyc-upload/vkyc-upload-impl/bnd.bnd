@@ -1,0 +1,9 @@
+Bundle-Name: vkyc-upload-impl
+Bundle-SymbolicName: com.boi.headless.rest.vkyc.impl
+Bundle-Version: 1.0.0
+
+Require-Bundle: \
+    com.boi.headless.rest.vkyc.api;visibility:=reexport,\
+    com.boi.headless.rest.spa.common;visibility:=reexport
+
+Import-Package: *
