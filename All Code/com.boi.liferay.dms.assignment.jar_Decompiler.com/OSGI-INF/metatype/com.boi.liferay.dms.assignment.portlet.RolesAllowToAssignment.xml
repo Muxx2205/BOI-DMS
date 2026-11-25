@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" localization="com.boi.liferay.dms.assignment.portlet.RolesAllowToAssignment">
+  <OCD name="Roles allow to assignment" id="com.boi.liferay.dms.assignment.portlet.RolesAllowToAssignment">
+    <AD name="Roles" id="roles" cardinality="0" required="false" default="" type="String"/>
+    <AD name="Is sync prod status" id="isSyncProdStatus" cardinality="0" required="false" default="false" type="Boolean"/>
+  </OCD>
+  <Designate pid="com.boi.liferay.dms.assignment.portlet.RolesAllowToAssignment">
+    <Object ocdref="com.boi.liferay.dms.assignment.portlet.RolesAllowToAssignment"/>
+  </Designate>
+</metatype:MetaData>

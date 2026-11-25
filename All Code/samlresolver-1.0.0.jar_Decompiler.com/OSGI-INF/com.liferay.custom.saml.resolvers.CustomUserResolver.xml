@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.liferay.custom.saml.resolvers.CustomUserResolver" immediate="true" activate="activate">
+  <property name="serviceranking" type="Integer" value="-2147482648"/>
+  <service>
+    <provide interface="com.liferay.saml.opensaml.integration.resolver.UserResolver"/>
+  </service>
+  <reference name="_companyLocalService" interface="com.liferay.portal.kernel.service.CompanyLocalService" field="_companyLocalService"/>
+  <reference name="_samlPeerBindingLocalService" interface="com.liferay.saml.persistence.service.SamlPeerBindingLocalService" field="_samlPeerBindingLocalService"/>
+  <reference name="_samlProviderConfigurationHelper" interface="com.liferay.saml.runtime.configuration.SamlProviderConfigurationHelper" field="_samlProviderConfigurationHelper"/>
+  <reference name="_samlSpIdpConnectionLocalService" interface="com.liferay.saml.persistence.service.SamlSpIdpConnectionLocalService" field="_samlSpIdpConnectionLocalService"/>
+  <reference name="_userFieldExpressionHandlerRegistry" interface="com.liferay.saml.opensaml.integration.field.expression.handler.registry.UserFieldExpressionHandlerRegistry" field="_userFieldExpressionHandlerRegistry"/>
+  <reference name="_userFieldExpressionResolverRegistry" interface="com.liferay.saml.opensaml.integration.field.expression.resolver.registry.UserFieldExpressionResolverRegistry" field="_userFieldExpressionResolverRegistry"/>
+  <reference name="_userLocalService" interface="com.liferay.portal.kernel.service.UserLocalService" field="_userLocalService"/>
+  <reference name="_userProcessorFactory" interface="com.liferay.saml.opensaml.integration.processor.factory.UserProcessorFactory" field="_userProcessorFactory"/>
+  <implementation class="com.liferay.custom.saml.resolvers.CustomUserResolver"/>
+</scr:component>

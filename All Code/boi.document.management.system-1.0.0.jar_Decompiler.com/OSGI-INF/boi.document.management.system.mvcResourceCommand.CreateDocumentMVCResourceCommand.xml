@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="boi.document.management.system.mvcResourceCommand.CreateDocumentMVCResourceCommand" immediate="true">
+  <property name="javax.portlet.name" type="String" value="boi_document_management_system_BoiDocumentManagementSystemPortlet"/>
+  <property name="mvc.command.name" type="String" value="createDocument"/>
+  <service>
+    <provide interface="com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourceCommand"/>
+  </service>
+  <reference name="_dlAppService" interface="com.liferay.document.library.kernel.service.DLAppService" field="_dlAppService"/>
+  <reference name="_dlFolderService" interface="com.liferay.document.library.kernel.service.DLFolderService" field="_dlFolderService"/>
+  <implementation class="boi.document.management.system.mvcResourceCommand.CreateDocumentMVCResourceCommand"/>
+</scr:component>

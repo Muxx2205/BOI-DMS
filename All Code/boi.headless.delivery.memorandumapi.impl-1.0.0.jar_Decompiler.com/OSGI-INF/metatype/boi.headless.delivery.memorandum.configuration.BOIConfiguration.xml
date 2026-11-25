@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" localization="boi.headless.delivery.memorandum.configuration.BOIConfiguration">
+  <OCD name="BOIConfiguration" id="boi.headless.delivery.memorandum.configuration.BOIConfiguration">
+    <AD name="Default folder id" id="DefaultFolderId" cardinality="0" required="false" default="0" type="Long"/>
+    <AD name="MEMORANDUMObject definition id" id="MEMORANDUMObjectDefinitionId" cardinality="0" required="false" default="0" type="Long"/>
+    <AD name="MEMOUser mapping object definition id" id="MEMOUserMappingObjectDefinitionId" cardinality="0" required="false" default="0" type="Long"/>
+    <AD name="MEMOWorkflow logs object definition id" id="MEMOWorkflowLogsObjectDefinitionId" cardinality="0" required="false" default="0" type="Long"/>
+    <AD name="Admin user id" id="AdminUserId" cardinality="0" required="false" type="Long"/>
+    <AD name="MEMORANDUMObject columns" id="MEMORANDUMObjectColumns" cardinality="0" required="false" type="String"/>
+  </OCD>
+  <Designate pid="boi.headless.delivery.memorandum.configuration.BOIConfiguration">
+    <Object ocdref="boi.headless.delivery.memorandum.configuration.BOIConfiguration"/>
+  </Designate>
+</metatype:MetaData>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="boi.user.management.configuration.ConfigurationHelper" immediate="true" activate="activate" modified="activate" configuration-pid="boi.user.management.configuration.RoleMappingConfiguration">
+  <service>
+    <provide interface="boi.user.management.configuration.ConfigurationHelper"/>
+  </service>
+  <implementation class="boi.user.management.configuration.ConfigurationHelper"/>
+</scr:component>

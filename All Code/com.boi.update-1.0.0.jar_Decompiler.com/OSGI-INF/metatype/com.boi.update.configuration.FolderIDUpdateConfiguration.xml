@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" localization="com.boi.update.configuration.FolderIDUpdateConfiguration">
+  <OCD name="Folder IDUpdate configuration" id="com.boi.update.configuration.FolderIDUpdateConfiguration">
+    <AD name="department-Name" id="departmentName" cardinality="0" required="false" type="String"/>
+  </OCD>
+  <Designate pid="com.boi.update.configuration.FolderIDUpdateConfiguration">
+    <Object ocdref="com.boi.update.configuration.FolderIDUpdateConfiguration"/>
+  </Designate>
+</metatype:MetaData>

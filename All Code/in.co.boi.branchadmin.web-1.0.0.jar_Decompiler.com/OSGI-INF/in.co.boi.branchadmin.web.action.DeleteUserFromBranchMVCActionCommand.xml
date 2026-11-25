@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="in.co.boi.branchadmin.web.action.DeleteUserFromBranchMVCActionCommand" immediate="true">
+  <property name="javax.portlet.name" type="String" value="in_co_boi_branchadmin_web_BranchAdminWebPortlet"/>
+  <property name="mvc.command.name" type="String" value="/deleteUserFromBranch"/>
+  <service>
+    <provide interface="com.liferay.portal.kernel.portlet.bridges.mvc.MVCActionCommand"/>
+  </service>
+  <reference name="organizationLocalService" interface="com.liferay.portal.kernel.service.OrganizationLocalService" field="organizationLocalService"/>
+  <reference name="userLocalService" interface="com.liferay.portal.kernel.service.UserLocalService" field="userLocalService"/>
+  <implementation class="in.co.boi.branchadmin.web.action.DeleteUserFromBranchMVCActionCommand"/>
+</scr:component>

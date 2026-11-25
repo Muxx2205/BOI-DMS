@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" localization="boi.headless.delivery.memorandum.configuration.PAIMSConfiguration">
+  <OCD name="PAIMSConfiguration" id="boi.headless.delivery.memorandum.configuration.PAIMSConfiguration">
+    <AD name="PAIMSObject definition id" id="PAIMSObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="PAIMSWorkflow logs definition id" id="PAIMSWorkflowLogsDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="PAIMSDefault folder id" id="PAIMSDefaultFolderId" cardinality="0" required="false" type="Long"/>
+  </OCD>
+  <Designate pid="boi.headless.delivery.memorandum.configuration.PAIMSConfiguration">
+    <Object ocdref="boi.headless.delivery.memorandum.configuration.PAIMSConfiguration"/>
+  </Designate>
+</metatype:MetaData>

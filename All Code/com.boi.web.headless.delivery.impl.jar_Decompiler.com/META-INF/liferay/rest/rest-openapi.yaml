@@ -1,0 +1,987 @@
+info:
+    description: "BoiHeadlessDeliveryWeb REST API"
+    license:
+        name: "Apache 2.0"
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+    title: "BoiHeadlessDeliveryWeb"
+    version: v1.0
+openapi: 3.0.1
+paths:
+  /request-upi-insurances:
+    get:
+      operationId: getRequestUPIInsurances
+      tags:
+        - UPIInsurance
+      parameters:
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: filter
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /request-upi-insurance/{id}:
+    get:
+      operationId: getRequestUPIInsurance
+      tags:
+        - UPIInsurance
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /add-upi-insurance/saveAsDraft:
+    post:
+      operationId: addUPIInsuranceAsDraft
+      tags:
+        - UPIInsurance
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+                
+  /add-upi-insurance/saveAsExport:
+    post:
+      operationId: addUPIInsuranceAsExport
+      tags:
+        - UPIInsurance
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+  /request-cpd-insurances:
+    get:
+      operationId: getRequestCPDInsurances
+      tags:
+        - CPDInsurance
+      parameters:
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: filter
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /request-cpd-insurance/{id}:
+    get:
+      operationId: getRequestCPDInsurance
+      tags:
+        - CPDInsurance
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /add-cpd-insurance/saveAsDraft:
+    post:
+      operationId: addCPDInsuranceAsDraft
+      tags:
+        - CPDInsurance
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+                
+  /add-cpd-insurance/saveAsExport:
+    post:
+      operationId: addCPDInsuranceAsExport
+      tags:
+        - CPDInsurance
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"              
+  /request-dbd-mandate:
+    get:
+      operationId: getRequestDBDMandates
+      tags:
+        - DBDMandate
+      parameters:
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: filter
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /request-dbd-mandate/{id}:
+    get:
+      operationId: getRequestDBDMandate
+      tags:
+        - DBDMandate
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /add-dbd-mandate/saveAsDraft:
+    post:
+      operationId: addDBDMandateAsDraft
+      tags:
+        - DBDMandate
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+                
+  /add-dbd-mandate/saveAsExport:
+    post:
+      operationId: addDBDMandateAsExport
+      tags:
+        - DBDMandate
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                  $ref: "#/components/schemas/BOIHeadlessResponse"    
+  /request-dbds:
+    get:
+      operationId: getDBDepartments
+      tags:
+        - DBDepartment
+      parameters:
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: filter
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /request-dbds/{id}:
+    get:
+      operationId: getDBDepartment
+      tags:
+        - DBDepartment
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /add-dbd/saveAsDraft:
+    post:
+      operationId: addDBDepartmentAsDraft
+      tags:
+        - DBDepartment
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+                
+  /add-dbd/saveAsExport:
+    post:
+      operationId: addDBDepartmentAsExport
+      tags:
+        - DBDepartment
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                  $ref: "#/components/schemas/BOIHeadlessResponse" 
+  /request-febononfinancial:
+    get:
+      operationId: getFEBONONFinancials
+      tags:
+        - FEBONONFinancial
+      parameters:
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: filter
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /request-febononfinancials/{id}:
+    get:
+      operationId: getFEBONONFinancial
+      tags:
+        - FEBONONFinancial
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /add-febononfinancial/saveAsDraft:
+    post:
+      operationId: addFEBONONFinancialAsDraft
+      tags:
+        - FEBONONFinancial
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+                
+  /add-febononfinancial/saveAsExport:
+    post:
+      operationId: addFEBONONFinancialAsExport
+      tags:
+        - FEBONONFinancial
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                  $ref: "#/components/schemas/BOIHeadlessResponse" 
+  /request-fbds:
+    get:
+      operationId: getFBDs
+      tags:
+        - FBD
+      parameters:
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: filter
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /request-fbds/{id}:
+    get:
+      operationId: getFBD
+      tags:
+        - FBD
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /add-fbd/saveAsDraft:
+    post:
+      operationId: addFBDAsDraft
+      tags:
+        - FBD
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+                
+  /add-fbd/saveAsExport:
+    post:
+      operationId: addFBDAsExport
+      tags:
+        - FBD
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                  $ref: "#/components/schemas/BOIHeadlessResponse" 
+  /request-financeploes:
+    get:
+      operationId: getFinancePloes
+      tags:
+        - FinancePloe
+      parameters:
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: filter
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /request-financeploes/{id}:
+    get:
+      operationId: getFinancePloe
+      tags:
+        - FinancePloe
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /add-financeploe/saveAsDraft:
+    post:
+      operationId: addFinancePloeAsDraft
+      tags:
+        - FinancePloe
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+                
+  /add-financeploe/saveAsExport:
+    post:
+      operationId: addFinancePloeAsExport
+      tags:
+        - FinancePloe
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                  $ref: "#/components/schemas/BOIHeadlessResponse" 
+                  
+  /request-fbdfebo:
+    get:
+      operationId: getRequestFBDFEBOs
+      tags:
+        - FBDFEBO
+      parameters:
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: filter
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /request-fbdfebo/{id}:
+    get:
+      operationId: getRequestFBDFEBO
+      tags:
+        - FBDFEBO
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /add-fbdfebo/saveAsDraft:
+    post:
+      operationId: addFBDFEBOAsDraft
+      tags:
+        - FBDFEBO
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+                
+  /add-fbdfebo/saveAsExport:
+    post:
+      operationId: addFBDFEBOAsExport
+      tags:
+        - FBDFEBO
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                  $ref: "#/components/schemas/BOIHeadlessResponse" 
+                  
+  /invoke-workflow:
+    post:
+      operationId: addCustomWorkflowLogs
+      tags:
+        - CustomWorkflowLogs
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                 $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                  $ref: "#/components/schemas/BOIHeadlessResponse" 
+  /invoke-workflow/{id}:
+    get:
+      operationId: getCustomWorkflowLogs
+      tags:
+        - CustomWorkflowLogs
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+components:
+  schemas:
+    BOIHeadlessResponse:
+      type: object
+      properties:
+        responseId:
+          type: integer
+        responseStatus:
+          type: string
+ 

@@ -1,0 +1,531 @@
+openapi: 3.0.1
+
+info:
+  title: "BoiHeadlessDeliveryMemorandumapi"
+  description: "BoiHeadlessDeliveryMemorandumapi REST API"
+  version: "v1.0"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+
+paths:
+
+  /request-memo-list:
+    get:
+      operationId: getMemoList
+      tags:
+        - Memorandum
+      parameters:
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: filter
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+
+  /request-memo/{id}:
+    get:
+      operationId: getMemo
+      tags:
+        - Memorandum
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+
+  /workflow-memo:
+    post:
+      operationId: approveOrRejectMemo
+      tags:
+        - Memorandum
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                  description: Memo file to export
+
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+
+  /add-memo/saveAsDraft:
+    post:
+      operationId: addMemoAsDraft
+      tags:
+        - Memorandum
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+
+  /add-memo/saveAsExport:
+    post:
+      operationId: addMemoAsExport
+      tags:
+        - Memorandum
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+
+  /memo/pre-request:
+    get:
+      operationId: GetMemoPreData
+      tags:
+        - Memorandum
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+                              
+  /add-psrs-doc:
+    post:
+      operationId: addDocument
+      tags:
+        - PSRSDocumentManagement
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+  
+  /psrs/excel-request:
+    get:
+      operationId: GetExcelPreData
+      tags:
+        - PSRSDocumentManagement
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /workflow-PSRS:
+    post:
+      operationId: approveOrRejectPSRS
+      tags:
+        - PSRSDocumentManagement
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                  description: PSRS file to export
+
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+  /export-excel-psrs/save/{reportType}:
+    post:
+      operationId: addPSRSExcelData
+      tags:
+        - PSRSDocumentManagement
+
+      parameters:
+        - name: reportType
+          in: path
+          required: true
+          schema:
+            type: string
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+          application/xml:
+            schema:
+              type: array
+              items:
+                type: object
+
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+ 
+  /export-to-pdf:
+    post:
+      operationId: ExportToPDF
+      tags:
+        - PSRSDocumentManagement
+      parameters:
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: filter
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string             
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+                
+  /request-psrs-list/{reportType}:
+    get:
+      operationId: getPSRSList
+      tags:
+        - PSRSDocumentManagement
+      parameters:
+        - name: reportType
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: filter
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+  /request-paims-list:
+    get:
+      operationId: getPaimsList
+      tags:
+        - PAIMSConsent
+      parameters:
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: filter
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+
+  /request-paims/{id}:
+    get:
+      operationId: getPaims
+      tags:
+        - PAIMSConsent
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+
+
+  /add-paims/saveAsDraft:
+    post:
+      operationId: addPaimsAsDraft
+      tags:
+        - PAIMSConsent
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+                
+  /add-paims/saveAsExport:
+    post:
+      operationId: addPaimsAsExport
+      tags:
+        - PAIMSConsent
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+  /workflow-paims:
+    post:
+      operationId: approveOrRejectPaims
+      tags:
+        - PAIMSConsent
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                  description: Paims file to export
+
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+          
+
+components:
+  schemas:
+    BOIHeadlessResponse:
+      type: object
+      properties:
+        responseId:
+          type: integer
+        responseStatus:
+          type: string
+        data:
+          type: object
+          additionalProperties: true

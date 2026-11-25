@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" localization="content/Language">
+  <OCD name="parent-setup-configuration-name" id="in.co.boi.branchadmin.web.config.ParentSetupConfiguration">
+    <AD name="parent-folder-name" id="parentFolderName" cardinality="0" required="false" default="BOI Document" type="String" description="select-the-parent-folder-from-documents-and-media"/>
+    <AD name="parent-organization-name" id="parentOrganizationName" cardinality="0" required="false" default="BOI HO" type="String" description="select-the-parent-organization"/>
+  </OCD>
+  <Designate pid="in.co.boi.branchadmin.web.config.ParentSetupConfiguration">
+    <Object ocdref="in.co.boi.branchadmin.web.config.ParentSetupConfiguration"/>
+  </Designate>
+</metatype:MetaData>

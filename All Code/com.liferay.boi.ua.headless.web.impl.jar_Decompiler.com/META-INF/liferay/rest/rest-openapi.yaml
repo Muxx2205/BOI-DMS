@@ -1,0 +1,99 @@
+info:
+    description: "BoiHeadlessUaWeb REST API"
+    license:
+        name: "Apache 2.0"
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+    title: "BoiHeadlessUaWeb"
+    version: v1.0
+openapi: 3.0.1
+
+paths:
+  /folders:
+    post:
+      tags:
+        - Folder
+      operationId: postFolder
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FolderCreateRequest"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/FolderCreateRequest"
+      responses:
+        200:
+          description: Folder Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Folder"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/Folder"
+
+  /bulk-file-uploads:
+    post:
+      tags:
+        - BulkFileUpload
+      summary: Upload multiple files in a single request
+      operationId: postBulkFileUpload
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Bulk upload response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BulkUploadResult"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BulkUploadResult"
+
+components:
+  schemas:
+
+    FolderCreateRequest:
+      type: object
+      required:
+        - parentFolderId
+        - name
+      properties:
+        parentFolderId:
+          type: integer
+        name:
+          type: string
+        description:
+          type: string
+
+    Folder:
+      type: object
+      properties:
+        code:
+          type: integer
+        message:
+          type: string
+        parentFolderId:
+          type: integer
+        createdFolderName:
+          type: string
+        createdFolderId:
+          type: string
+
+    BulkUploadResult:
+      type: object
+      properties:
+        code:
+          type: integer
+        message:
+          type: string

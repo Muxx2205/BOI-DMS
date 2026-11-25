@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.liferay.boi.dashboard.report.application.ObjectEntryApproveSchedularJob" immediate="true">
+  <property name="dispatch.task.executor.name" type="String" value="ObjectEntryApproveSchedularJob"/>
+  <property name="dispatch.task.executor.type" type="String" value="ObjectEntryApproveSchedularJob"/>
+  <service>
+    <provide interface="com.liferay.dispatch.executor.DispatchTaskExecutor"/>
+  </service>
+  <implementation class="com.liferay.boi.dashboard.report.application.ObjectEntryApproveSchedularJob"/>
+</scr:component>

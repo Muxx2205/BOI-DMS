@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="boi.headless.delivery.spa.internal.resource.v1_0.SSYResourceImpl" activate="activate" modified="activate" configuration-pid="com.boi.headless.rest.common.spa.application.BOISPAConfiguation">
+  <properties entry="OSGI-INF/liferay/rest/v1_0/ssy.properties"/>
+  <service scope="prototype">
+    <provide interface="boi.headless.delivery.spa.resource.v1_0.SSYResource"/>
+  </service>
+  <reference name="dlAppService" interface="com.liferay.document.library.kernel.service.DLAppService" field="dlAppService"/>
+  <reference name="dtoConverterRegistry" interface="com.liferay.portal.vulcan.dto.converter.DTOConverterRegistry" field="dtoConverterRegistry"/>
+  <reference name="objectDefinitionLocalService" interface="com.liferay.object.service.ObjectDefinitionLocalService" field="objectDefinitionLocalService"/>
+  <reference name="objectEntryLocalService" interface="com.liferay.object.service.ObjectEntryLocalService" field="objectEntryLocalService"/>
+  <reference name="objectEntryManagerRegistry" interface="com.liferay.object.rest.manager.v1_0.ObjectEntryManagerRegistry" field="objectEntryManagerRegistry"/>
+  <reference name="objectFieldLocalService" interface="com.liferay.object.service.ObjectFieldLocalService" field="objectFieldLocalService"/>
+  <reference name="workflowTaskManager" interface="com.liferay.portal.kernel.workflow.WorkflowTaskManager" field="workflowTaskManager"/>
+  <implementation class="boi.headless.delivery.spa.internal.resource.v1_0.SSYResourceImpl"/>
+</scr:component>

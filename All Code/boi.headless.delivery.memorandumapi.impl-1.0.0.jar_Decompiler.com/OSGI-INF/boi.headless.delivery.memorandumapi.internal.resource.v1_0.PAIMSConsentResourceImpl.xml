@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="boi.headless.delivery.memorandumapi.internal.resource.v1_0.PAIMSConsentResourceImpl" activate="activate" modified="activate" configuration-pid="boi.headless.delivery.memorandum.configuration.PAIMSConfiguration">
+  <properties entry="OSGI-INF/liferay/rest/v1_0/paims-consent.properties"/>
+  <service scope="prototype">
+    <provide interface="boi.headless.delivery.memorandumapi.resource.v1_0.PAIMSConsentResource"/>
+  </service>
+  <reference name="_ddmExpressionFactory" interface="com.liferay.dynamic.data.mapping.expression.DDMExpressionFactory" field="_ddmExpressionFactory"/>
+  <reference name="_dlAppService" interface="com.liferay.document.library.kernel.service.DLAppService" field="_dlAppService"/>
+  <reference name="_dtoConverterRegistry" interface="com.liferay.portal.vulcan.dto.converter.DTOConverterRegistry" field="_dtoConverterRegistry"/>
+  <reference name="_objectDefinitionLocalService" interface="com.liferay.object.service.ObjectDefinitionLocalService" field="_objectDefinitionLocalService"/>
+  <reference name="_objectEntryLocalService" interface="com.liferay.object.service.ObjectEntryLocalService" field="_objectEntryLocalService"/>
+  <reference name="_objectEntryManagerRegistry" interface="com.liferay.object.rest.manager.v1_0.ObjectEntryManagerRegistry" field="_objectEntryManagerRegistry"/>
+  <reference name="_objectFieldLocalService" interface="com.liferay.object.service.ObjectFieldLocalService" field="_objectFieldLocalService"/>
+  <reference name="_objectFieldSettingLocalService" interface="com.liferay.object.service.ObjectFieldSettingLocalService" field="_objectFieldSettingLocalService"/>
+  <reference name="_portal" interface="com.liferay.portal.kernel.util.Portal" field="_portal"/>
+  <reference name="_userLocalService" interface="com.liferay.portal.kernel.service.UserLocalService" field="_userLocalService"/>
+  <implementation class="boi.headless.delivery.memorandumapi.internal.resource.v1_0.PAIMSConsentResourceImpl"/>
+</scr:component>

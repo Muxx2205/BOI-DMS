@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="boi.user.management.backgroundTask.ExcelUploadBackgroundTaskExecutor" immediate="true">
+  <property name="background.task.executor.class.name" type="String" value="boi.user.management.backgroundTask.ExcelUploadBackgroundTaskExecutor"/>
+  <service>
+    <provide interface="com.liferay.portal.kernel.backgroundtask.BackgroundTaskExecutor"/>
+  </service>
+  <implementation class="boi.user.management.backgroundTask.ExcelUploadBackgroundTaskExecutor"/>
+</scr:component>

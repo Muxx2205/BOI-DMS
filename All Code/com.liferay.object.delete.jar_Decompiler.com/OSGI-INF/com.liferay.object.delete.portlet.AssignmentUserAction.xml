@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.liferay.object.delete.portlet.AssignmentUserAction" immediate="true">
+  <property name="javax.portlet.name" type="String" value="com_liferay_object_delete_ObjectEntryDeletionPortlet"/>
+  <property name="mvc.command.name" type="String" value="saveIt"/>
+  <service>
+    <provide interface="com.liferay.portal.kernel.portlet.bridges.mvc.MVCActionCommand"/>
+  </service>
+  <reference name="_graphWalker" interface="com.liferay.portal.workflow.kaleo.runtime.graph.GraphWalker" field="_graphWalker"/>
+  <reference name="_kaleoWorkflowModelConverter" interface="com.liferay.portal.workflow.kaleo.KaleoWorkflowModelConverter" field="_kaleoWorkflowModelConverter"/>
+  <implementation class="com.liferay.object.delete.portlet.AssignmentUserAction"/>
+</scr:component>

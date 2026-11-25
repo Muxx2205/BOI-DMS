@@ -1,0 +1,8 @@
+apiDir: "../boi-headless-delivery-spa-api/src/main/java"
+apiPackagePath: "boi.headless.delivery.spa"
+application:
+    baseURI: "/boi-headless-delivery-spa"
+    className: "BoiHeadlessDeliverySpaApplication"
+    name: "BoiHeadlessDeliverySpa"
+author: "Bpratap"
+ 

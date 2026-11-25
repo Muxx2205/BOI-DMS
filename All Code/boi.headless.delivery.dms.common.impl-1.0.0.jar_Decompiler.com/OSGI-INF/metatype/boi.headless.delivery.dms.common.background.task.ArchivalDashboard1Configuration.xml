@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" localization="boi.headless.delivery.dms.common.background.task.ArchivalDashboard1Configuration">
+  <OCD name="Archival dashboard1 configuration" id="boi.headless.delivery.dms.common.background.task.ArchivalDashboard1Configuration">
+    <AD name="Archive basic auth" id="ArchiveBasicAuth" cardinality="0" required="false" type="String"/>
+    <AD name="Archive end point" id="ArchiveEndPoint" cardinality="0" required="false" type="String"/>
+    <AD name="Archive template names" id="ArchiveTemplateNames" cardinality="0" required="false" type="String"/>
+  </OCD>
+  <Designate pid="boi.headless.delivery.dms.common.background.task.ArchivalDashboard1Configuration">
+    <Object ocdref="boi.headless.delivery.dms.common.background.task.ArchivalDashboard1Configuration"/>
+  </Designate>
+</metatype:MetaData>

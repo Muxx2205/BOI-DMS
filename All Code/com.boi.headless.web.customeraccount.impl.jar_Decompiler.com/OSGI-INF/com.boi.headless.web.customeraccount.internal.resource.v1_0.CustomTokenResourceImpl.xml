@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.boi.headless.web.customeraccount.internal.resource.v1_0.CustomTokenResourceImpl" activate="activate" modified="activate" configuration-pid="com.boi.headless.rest.common.application.BOITokenGenerate">
+  <properties entry="OSGI-INF/liferay/rest/v1_0/custom-token.properties"/>
+  <service scope="prototype">
+    <provide interface="com.boi.headless.web.customeraccount.resource.v1_0.CustomTokenResource"/>
+  </service>
+  <implementation class="com.boi.headless.web.customeraccount.internal.resource.v1_0.CustomTokenResourceImpl"/>
+</scr:component>

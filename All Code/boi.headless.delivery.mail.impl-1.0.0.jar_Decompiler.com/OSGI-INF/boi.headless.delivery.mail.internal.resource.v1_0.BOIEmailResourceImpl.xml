@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="boi.headless.delivery.mail.internal.resource.v1_0.BOIEmailResourceImpl" activate="activate" modified="activate" configuration-pid="boi.headless.delivery.mail.configuration.MailConfiguration">
+  <properties entry="OSGI-INF/liferay/rest/v1_0/boi-email.properties"/>
+  <service scope="prototype">
+    <provide interface="boi.headless.delivery.mail.resource.v1_0.BOIEmailResource"/>
+  </service>
+  <reference name="_dtoConverterRegistry" interface="com.liferay.portal.vulcan.dto.converter.DTOConverterRegistry" field="_dtoConverterRegistry"/>
+  <reference name="_objectEntryManagerRegistry" interface="com.liferay.object.rest.manager.v1_0.ObjectEntryManagerRegistry" field="_objectEntryManagerRegistry"/>
+  <implementation class="boi.headless.delivery.mail.internal.resource.v1_0.BOIEmailResourceImpl"/>
+</scr:component>

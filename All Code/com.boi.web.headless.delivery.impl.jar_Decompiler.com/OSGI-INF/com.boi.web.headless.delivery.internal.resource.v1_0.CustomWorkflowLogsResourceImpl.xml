@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.boi.web.headless.delivery.internal.resource.v1_0.CustomWorkflowLogsResourceImpl" configuration-pid="com.boi.headless.rest.common.application.BOIWorkflowConfiguation">
+  <properties entry="OSGI-INF/liferay/rest/v1_0/custom-workflow-logs.properties"/>
+  <service scope="prototype">
+    <provide interface="com.boi.web.headless.delivery.resource.v1_0.CustomWorkflowLogsResource"/>
+  </service>
+  <implementation class="com.boi.web.headless.delivery.internal.resource.v1_0.CustomWorkflowLogsResourceImpl"/>
+</scr:component>

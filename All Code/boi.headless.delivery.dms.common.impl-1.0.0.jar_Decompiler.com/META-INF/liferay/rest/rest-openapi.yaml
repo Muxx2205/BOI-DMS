@@ -1,0 +1,203 @@
+openapi: 3.0.1
+info:
+  title: BoiHeadlessDeliveryDmsCommon
+  description: BoiHeadlessDeliveryDmsCommon REST API
+  version: v1.0
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+
+paths:
+  /export-to-excel:
+    post:
+      operationId: ExportToExcel
+      tags:
+        - DashboardGraph
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+          application/xml:
+            schema:
+              type: object
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+  /pre-febo-data:
+    post:
+      operationId: preData
+      tags:
+        - FeboDashboard
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+          application/xml:
+            schema:
+              type: object  
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+  /febo-dashboard:
+    post:
+      operationId: getFeboDashboard
+      tags:
+        - FeboDashboard
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+          application/xml:
+            schema:
+              type: object
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+  /get-archive-token:
+    get:
+      operationId: getArchiveToken
+      tags:
+        - ArchiveToken
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"   
+                
+  /download-archive-document/{fileEntryId}:
+    get:
+      operationId: downloadArchiveFile
+      tags:
+        - ArchiveDocumentDownload
+      parameters:
+        - name: fileEntryId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: "File successfully downloaded"
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        '403':
+          description: "User does not have permission to view the file"
+        '404':
+          description: "File not found"
+        '500':
+          description: "Internal server error"                       
+  /init-archive-dashboard:
+    get:
+      operationId: initArchiveDashboard
+      tags:
+        - ArchiveDashboard1
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+  /list-archive-dashboard-1/{template}:
+    get:
+      operationId: listArchiveDashboard1
+      tags:
+        - ArchiveDashboard1
+      parameters:
+        - name: template
+          in: path
+          required: true
+          schema:
+            type: string
+
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+
+        - name: filter
+          in: query
+          required: false
+          schema:
+            type: string
+
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: integer
+
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/BOIHeadlessResponse"                           
+
+components:
+  schemas:
+    BOIHeadlessResponse:
+      type: object
+      properties:
+        responseId:
+          type: integer
+        responseStatus:
+          type: string
+        data:
+          type: object

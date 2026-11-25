@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.boi.headless.web.customeraccount.internal.resource.v1_0.MetadataResourceImpl" activate="activate" modified="activate" configuration-pid="com.boi.headless.rest.common.application.BOIWorkflowConfiguation">
+  <properties entry="OSGI-INF/liferay/rest/v1_0/metadata.properties"/>
+  <service scope="prototype">
+    <provide interface="com.boi.headless.web.customeraccount.resource.v1_0.MetadataResource"/>
+  </service>
+  <reference name="_dlAppService" interface="com.liferay.document.library.kernel.service.DLAppService" field="_dlAppService"/>
+  <implementation class="com.boi.headless.web.customeraccount.internal.resource.v1_0.MetadataResourceImpl"/>
+</scr:component>

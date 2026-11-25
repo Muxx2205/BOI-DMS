@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" localization="boi.document.management.system.configuration.DMSConfiguration">
+  <OCD name="DMSConfiguration" id="boi.document.management.system.configuration.DMSConfiguration">
+    <AD name="API 3 LEVEl HIDE FOLDER" id="api3LevelHideFolder" cardinality="0" required="false" type="String" description=" Add API 3 LEVEL HIDE Folders in Comma-separated"/>
+    <AD name="SPA Roles" id="spaRoles" cardinality="0" required="false" type="String" description=" Add Roles in Comma-separated"/>
+    <AD name="WorkFlow Folders Mapping" id="workflowFolderNameMapping" cardinality="0" required="false" type="String" description="Add Mapping in Comma-Separated"/>
+    <AD name="Workflow Role Name" id="workflowRoleName" cardinality="0" required="false" type="String" description="Add Workflow Role Name in Comma-Separated"/>
+    <AD name="SPA Folder Ids with Template" id="spaFolderIdsWithTemplate" cardinality="0" required="false" type="String" description="Add SPA Folder Ids with Template in Comma-Separated"/>
+    <AD name="Organization Master Object Id" id="organizationMasterObjectId" cardinality="0" required="false" type="Long" description="Add Organization Master Object Id"/>
+    <AD name="User Folder Object Id" id="userFolderObjectId" cardinality="0" required="false" type="Long" description="Add User Folder Object Id"/>
+    <AD name="NBG Level Folder Names" id="nbgLevelFolderNames" cardinality="0" required="false" type="String" description="Add NBG Level Folder Names in Comma-Separated"/>
+    <AD name="Max file size" id="maxFileSize" cardinality="0" required="false" default="10" type="Long" description="Maximum file size in MB"/>
+    <AD name="Max files" id="maxFiles" cardinality="0" required="false" default="10" type="Long" description="Maximum number of files allowed per upload"/>
+    <AD name="Filter file folder by department" id="filterFileFolderByDepartment" cardinality="0" required="false" type="String" description="Filters files and folders by Department"/>
+    <AD name="Allowed extensions" id="allowedExtensions" cardinality="0" required="false" default="pdf,doc,docx,xls,xlsx,txt,jpg,jpeg,png,gif,tif,tiff" type="String" description="Comma-separated list of allowed file extensions"/>
+    <AD name="Blocked extensions" id="blockedExtensions" cardinality="0" required="false" default="exe,bat,cmd,sh,js,vbs,ps1,jar,war,ear,dll,msi" type="String" description="Comma-separated list of blocked file extensions"/>
+    <AD name="Reserved names" id="reservedNames" cardinality="2147483647" required="false" default="CON,PRN,AUX,NUL,COM1,COM2,COM3,COM4,COM5,COM6,COM7,COM8,COM9,LPT1,LPT2,LPT3,LPT4,LPT5,LPT6,LPT7,LPT8,LPT9" type="String" description="Comma-separated list of reserved filenames"/>
+    <AD name="Archive Endpoint" id="archiveEndPoints" cardinality="0" required="false" type="String" description="Archive Endpoint"/>
+    <AD name="DMS Endpoint" id="dmsEndPoints" cardinality="0" required="false" type="String" description="DMS Endpoint"/>
+    <AD name="Archive ClientId" id="archiveClientId" cardinality="0" required="false" type="String" description="Archive ClientId"/>
+    <AD name="Archive SecretId" id="archiveSecretId" cardinality="0" required="false" type="String" description="Archive SecretId"/>
+    <AD name="Board Secretariat File Rename FolderIds" id="boardSecretariatFileRenameFolderIds" cardinality="0" required="false" type="String" description="Board Secretariat File Rename FolderIds"/>
+    <AD name="Board Secretariat FolderId" id="boardSecretariatFolderId" cardinality="0" required="false" type="String" description="Board Secretariat FolderId"/>
+  </OCD>
+  <Designate pid="boi.document.management.system.configuration.DMSConfiguration">
+    <Object ocdref="boi.document.management.system.configuration.DMSConfiguration"/>
+  </Designate>
+</metatype:MetaData>

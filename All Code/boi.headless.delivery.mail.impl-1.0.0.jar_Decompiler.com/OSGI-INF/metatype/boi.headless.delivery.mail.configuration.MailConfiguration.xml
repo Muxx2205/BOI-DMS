@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" localization="boi.headless.delivery.mail.configuration.MailConfiguration">
+  <OCD name="Mail configuration" id="boi.headless.delivery.mail.configuration.MailConfiguration">
+    <AD name="From Email Address (Set 1)" id="fromEmail1" cardinality="0" required="false" type="String" description="Sender email address for Set 1"/>
+    <AD name="To Email Addresses (Set 1)" id="toEmails1" cardinality="0" required="false" type="String" description="Comma-separated recipients for Set 1"/>
+    <AD name="CC Email Addresses (Set 1)" id="ccEmails1" cardinality="0" required="false" type="String" description="Comma-separated CC for Set 1"/>
+    <AD name="Enable Branch Mail Mapping (Set 1)" id="branchMailAddInCC1" cardinality="0" required="false" default="false" type="Boolean" description="Enable Branch Mail Mapping for Set 1"/>
+    <AD name="BCC Email Addresses (Set 1)" id="bccEmails1" cardinality="0" required="false" type="String" description="Comma-separated BCC for Set 1"/>
+    <AD name="Reply-To Addresses (Set 1)" id="replyToEmails1" cardinality="0" required="false" type="String" description="Comma-separated Reply-To for Set 1"/>
+    <AD name="In-Reply-To Message ID (Set 1)" id="inReplyTo1" cardinality="0" required="false" type="String" description="In-Reply-To ID for Set 1"/>
+    <AD name="Email Subject (Set 1)" id="emailSubject1" cardinality="0" required="false" type="String" description="Subject line for email template 1"/>
+    <AD name="Email Body (Set 1)" id="emailBody1" cardinality="0" required="false" type="String" description="Body content for email template 1"/>
+    <AD name="From Email Address (Set 2)" id="fromEmail2" cardinality="0" required="false" type="String" description="Sender email address for Set 2"/>
+    <AD name="To Email Addresses (Set 2)" id="toEmails2" cardinality="0" required="false" type="String" description="Comma-separated recipients for Set 2"/>
+    <AD name="CC Email Addresses (Set 2)" id="ccEmails2" cardinality="0" required="false" type="String" description="Comma-separated CC for Set 2"/>
+    <AD name="Enable Branch Mail Mapping (Set 2)" id="branchMailAddInCC2" cardinality="0" required="false" default="false" type="Boolean" description="Enable Branch Mail Mapping for Set 2"/>
+    <AD name="BCC Email Addresses (Set 2)" id="bccEmails2" cardinality="0" required="false" type="String" description="Comma-separated BCC for Set 2"/>
+    <AD name="Reply-To Addresses (Set 2)" id="replyToEmails2" cardinality="0" required="false" type="String" description="Comma-separated Reply-To for Set 2"/>
+    <AD name="In-Reply-To Message ID (Set 2)" id="inReplyTo2" cardinality="0" required="false" type="String" description="In-Reply-To ID for Set 2"/>
+    <AD name="Email Subject (Set 2)" id="emailSubject2" cardinality="0" required="false" type="String" description="Subject line for email template 2"/>
+    <AD name="Email Body (Set 2)" id="emailBody2" cardinality="0" required="false" type="String" description="Body content for email template 2"/>
+    <AD name="From Email Address (Set 3)" id="fromEmail3" cardinality="0" required="false" type="String" description="Sender email address for Set 3"/>
+    <AD name="To Email Addresses (Set 3)" id="toEmails3" cardinality="0" required="false" type="String" description="Comma-separated recipients for Set 3"/>
+    <AD name="CC Email Addresses (Set 3)" id="ccEmails3" cardinality="0" required="false" type="String" description="Comma-separated CC for Set 3"/>
+    <AD name="Enable Branch Mail Mapping (Set 3)" id="branchMailAddInCC3" cardinality="0" required="false" default="false" type="Boolean" description="Enable Branch Mail Mapping for Set 3"/>
+    <AD name="BCC Email Addresses (Set 3)" id="bccEmails3" cardinality="0" required="false" type="String" description="Comma-separated BCC for Set 3"/>
+    <AD name="Reply-To Addresses (Set 3)" id="replyToEmails3" cardinality="0" required="false" type="String" description="Comma-separated Reply-To for Set 3"/>
+    <AD name="In-Reply-To Message ID (Set 3)" id="inReplyTo3" cardinality="0" required="false" type="String" description="In-Reply-To ID for Set 3"/>
+    <AD name="Email Subject (Set 3)" id="emailSubject3" cardinality="0" required="false" type="String" description="Subject line for email template 3"/>
+    <AD name="Email Body (Set 3)" id="emailBody3" cardinality="0" required="false" type="String" description="Body content for email template 3"/>
+    <AD name="HTML Format" id="htmlFormat" cardinality="0" required="false" default="false" type="Boolean" description="Send the email in HTML format if checked"/>
+    <AD name="SMTP Account" id="smtpAccount" cardinality="0" required="false" type="String" description="Optional SMTP account name or ID to use for sending emails"/>
+    <AD name="Branch Mail Mapping" id="branchMailMappingObjectId" cardinality="0" required="false" type="Long" description="Branch Mail Mapping Folder Id"/>
+  </OCD>
+  <Designate pid="boi.headless.delivery.mail.configuration.MailConfiguration">
+    <Object ocdref="boi.headless.delivery.mail.configuration.MailConfiguration"/>
+  </Designate>
+</metatype:MetaData>

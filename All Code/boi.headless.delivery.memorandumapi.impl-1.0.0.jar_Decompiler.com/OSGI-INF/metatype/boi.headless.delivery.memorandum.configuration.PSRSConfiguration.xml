@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" localization="boi.headless.delivery.memorandum.configuration.PSRSConfiguration">
+  <OCD name="PSRSConfiguration" id="boi.headless.delivery.memorandum.configuration.PSRSConfiguration">
+    <AD name="M1 id" id="M1Id" cardinality="0" required="false" type="Long"/>
+    <AD name="M2 id" id="M2Id" cardinality="0" required="false" type="Long"/>
+    <AD name="M3 id" id="M3Id" cardinality="0" required="false" type="Long"/>
+    <AD name="M4 id" id="M4Id" cardinality="0" required="false" type="Long"/>
+    <AD name="M5 id" id="M5Id" cardinality="0" required="false" type="Long"/>
+    <AD name="M6 id" id="M6Id" cardinality="0" required="false" type="Long"/>
+    <AD name="M7 id" id="M7Id" cardinality="0" required="false" type="Long"/>
+    <AD name="M8 id" id="M8Id" cardinality="0" required="false" type="Long"/>
+    <AD name="Monthly check list id" id="MonthlyCheckListId" cardinality="0" required="false" type="Long"/>
+    <AD name="M1 object columns" id="M1ObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="M2 object columns" id="M2ObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="M3 object columns" id="M3ObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="M4 object columns" id="M4ObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="M5 object columns" id="M5ObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="M6 object columns" id="M6ObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="M7 object columns" id="M7ObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="M8 object columns" id="M8ObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="M1 order columns" id="M1OrderColumns" cardinality="0" required="false" type="String"/>
+    <AD name="M2 order columns" id="M2OrderColumns" cardinality="0" required="false" type="String"/>
+    <AD name="M3 order columns" id="M3OrderColumns" cardinality="0" required="false" type="String"/>
+    <AD name="M4 order columns" id="M4OrderColumns" cardinality="0" required="false" type="String"/>
+    <AD name="M5 order columns" id="M5OrderColumns" cardinality="0" required="false" type="String"/>
+    <AD name="M6 order columns" id="M6OrderColumns" cardinality="0" required="false" type="String"/>
+    <AD name="M7 order columns" id="M7OrderColumns" cardinality="0" required="false" type="String"/>
+    <AD name="M8 order columns" id="M8OrderColumns" cardinality="0" required="false" type="String"/>
+    <AD name="Monthly check list order columns" id="MonthlyCheckListOrderColumns" cardinality="0" required="false" type="String"/>
+    <AD name="Common hide columns" id="CommonHideColumns" cardinality="0" required="false" type="String"/>
+    <AD name="PSRSDate columns" id="PSRSDateColumns" cardinality="0" required="false" type="String"/>
+    <AD name="Head office folder id" id="headOfficeFolderId" cardinality="0" required="false" default="0" type="Long"/>
+    <AD name="PSRSFolder id" id="PSRSFolderId" cardinality="0" required="false" default="0" type="Long"/>
+    <AD name="Is export to excel" id="isExportToExcel" cardinality="0" required="false" type="Boolean"/>
+  </OCD>
+  <Designate pid="boi.headless.delivery.memorandum.configuration.PSRSConfiguration">
+    <Object ocdref="boi.headless.delivery.memorandum.configuration.PSRSConfiguration"/>
+  </Designate>
+</metatype:MetaData>

@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" localization="boi.headless.delivery.dms.common.background.task.DMSCommonAPIConfiguation">
+  <OCD name="DMSCommon APIConfiguation" id="boi.headless.delivery.dms.common.background.task.DMSCommonAPIConfiguation">
+    <AD name="DMSDefualt folder id" id="DMSDefualtFolderId" cardinality="0" required="false" default="0" type="Long"/>
+    <AD name="Board level meeting object definition id" id="BoardLevelMeetingObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="CDADObject definition id" id="CDADObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="Inspection audit ACEObject definition id" id="InspectionAuditACEObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="Data ware house object definition id" id="DataWareHouseObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="EPlate form object definition id" id="EPlateFormObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="ECRMForm object definition id" id="ECRMFormObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="KCCJansamarth form object definition id" id="KCCJansamarthFormObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="UTOPIAForm object definition id" id="UTOPIAFormObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="Electrical wiring object definition id" id="ElectricalWiringObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="Finastra object definition id" id="FinastraObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="Finastra other object definition id" id="FinastraOtherObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="HORDObject definition id" id="HORDObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="HOSecurity department object definition id" id="HOSecurityDepartmentObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="Inspection audit ACBObject definition id" id="InspectionAuditACBObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="Inspection audit CAAppointment object definition id" id="InspectionAuditCAAppointmentObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="Inspection audit misc object definition id" id="InspectionAuditMiscObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="Inspection audit oth report object definition id" id="InspectionAuditOthReportObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="Inspection audit repots object definition id" id="InspectionAuditRepotsObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="Inspection foreign audit object definition id" id="InspectionForeignAuditObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="Internal layout map object definition id" id="InternalLayoutMapObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="International dep object definition id" id="InternationalDepObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="Branch digitation object definition id" id="BranchDigitationObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="Project management list object definition id" id="ProjectManagementListObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="Admin user id" id="AdminUserId" cardinality="0" required="false" type="Long"/>
+    <AD name="Board level meeting object columns" id="BoardLevelMeetingObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="CDADObject columns" id="CDADObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="HORecruitment div object columns" id="HORecruitmentDivObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="IAORObject columns" id="IAORObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="Insception audit ACBObject columns" id="InsceptionAuditACBObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="Insception audit ACEObject columns" id="InsceptionAuditACEObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="Insception audit MISCObject columns" id="InsceptionAuditMISCObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="Internal layout map object columns" id="InternalLayoutMapObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="International department object columns" id="InternationalDepartmentObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="Project manage list object columns" id="ProjectManageListObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="Inspection foreign audit object columns" id="InspectionForeignAuditObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="Data warehouse object columns" id="DataWarehouseObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="Electrical wiring diagram object columns" id="ElectricalWiringDiagramObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="HOSecurity dep object columns" id="HOSecurityDepObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="Inspection audit CAAppoint object columns" id="InspectionAuditCAAppointObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="Inspection audit misc object columns" id="InspectionAuditMiscObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="Inspection audit reports object columns" id="InspectionAuditReportsObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="Customer account object definition id" id="CustomerAccountObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="UPIInsurance object definition id" id="UPIInsuranceObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="CPDInsurance object definition id" id="CPDInsuranceObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="Custom workflow logs object definition id" id="CustomWorkflowLogsObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="DBDepartment object definition id" id="DBDepartmentObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="DBDMandate object definition id" id="DBDMandateObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="FBDObject definition id" id="FBDObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="FEBONONFinancial object definition id" id="FEBONONFinancialObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="Finance ploe object definition id" id="FinancePloeObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="FBDFRBOObject definition id" id="FBDFRBOObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="Customer account object columns" id="CustomerAccountObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="UPIInsurance object columns" id="UPIInsuranceObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="CPDInsurance object columns" id="CPDInsuranceObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="DBDepartment object columns" id="DBDepartmentObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="DBDMandate object columns" id="DBDMandateObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="FBDObject columns" id="FBDObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="FEBONONFinancial object columns" id="FEBONONFinancialObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="Finance ploe object columns" id="FinancePloeObjectColumns" cardinality="0" required="false" type="String"/>
+    <AD name="FBDFOBOObject columns" id="FBDFOBOObjectColumns" cardinality="0" required="false" type="String"/>
+  </OCD>
+  <Designate pid="boi.headless.delivery.dms.common.background.task.DMSCommonAPIConfiguation">
+    <Object ocdref="boi.headless.delivery.dms.common.background.task.DMSCommonAPIConfiguation"/>
+  </Designate>
+</metatype:MetaData>

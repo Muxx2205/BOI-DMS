@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="boi.document.management.system.mvcResourceCommand.ArchiveSearchDocumentsResourceCommand" immediate="true" activate="activate" modified="activate" configuration-pid="boi.document.management.system.configuration.DMSConfiguration">
+  <property name="javax.portlet.name" type="String" value="boi_document_management_system_BoiDocumentManagementSystemPortlet"/>
+  <property name="mvc.command.name" type="String" value="/archive/search-documents"/>
+  <service>
+    <provide interface="com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourceCommand"/>
+  </service>
+  <implementation class="boi.document.management.system.mvcResourceCommand.ArchiveSearchDocumentsResourceCommand"/>
+</scr:component>

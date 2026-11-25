@@ -1,0 +1,8 @@
+apiDir: "../boi-headless-ua-web-api/src/main/java"
+apiPackagePath: "com.liferay.boi.ua.headless.web"
+application:
+    baseURI: "/boi-headless-ua-web"
+    className: "BoiHeadlessUaWebApplication"
+    name: "BoiHeadlessUaWeb"
+author: "sumant.chaubey"
+compatibilityVersion: 6

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.boi.headless.web.customeraccount.internal.jaxrs.application.CustomerAccountHeadlessDeliveryApplication">
+  <property name="liferay.jackson" type="String" value="false"/>
+  <property name="osgi.jaxrs.application.base" type="String" value="/customer-account-headless-delivery"/>
+  <property name="osgi.jaxrs.extension.select" type="String" value="(osgi.jaxrs.name=Liferay.Vulcan)"/>
+  <property name="osgi.jaxrs.name" type="String" value="CustomerAccountHeadlessDelivery"/>
+  <service>
+    <provide interface="javax.ws.rs.core.Application"/>
+  </service>
+  <implementation class="com.boi.headless.web.customeraccount.internal.jaxrs.application.CustomerAccountHeadlessDeliveryApplication"/>
+</scr:component>

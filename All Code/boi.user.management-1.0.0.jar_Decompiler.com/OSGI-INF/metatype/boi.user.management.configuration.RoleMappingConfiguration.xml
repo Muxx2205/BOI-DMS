@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" localization="boi.user.management.configuration.RoleMappingConfiguration">
+  <OCD name="Role mapping configuration" id="boi.user.management.configuration.RoleMappingConfiguration">
+    <AD name="role-mapping" id="roleMappings" cardinality="2147483647" required="false" default="FINANCE PLOE=Finance Ploe  
+UPI-CPD Insurance=UPI Insurance,CPD Insurance" type="String" description="Define role mappings in format: source=target1,target2"/>
+    <AD name="department-mapping" id="departmentMappings" cardinality="0" required="false" type="String"/>
+    <AD name="organization-Id" id="organizationId" cardinality="0" required="false" type="Long"/>
+    <AD name="folder-Id" id="folderId" cardinality="0" required="false" type="Long"/>
+  </OCD>
+  <Designate pid="boi.user.management.configuration.RoleMappingConfiguration">
+    <Object ocdref="boi.user.management.configuration.RoleMappingConfiguration"/>
+  </Designate>
+</metatype:MetaData>

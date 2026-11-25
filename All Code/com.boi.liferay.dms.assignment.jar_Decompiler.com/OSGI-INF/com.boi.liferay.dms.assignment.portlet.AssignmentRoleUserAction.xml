@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.boi.liferay.dms.assignment.portlet.AssignmentRoleUserAction" immediate="true" activate="activate" modified="activate" configuration-pid="com.boi.liferay.dms.assignment.portlet.RolesAllowToAssignment">
+  <property name="javax.portlet.name" type="String" value="com_boi_liferay_dms_assignment_AssignmentUsersPortlet"/>
+  <property name="mvc.command.name" type="String" value="assignmentRoleWithUser"/>
+  <service>
+    <provide interface="com.liferay.portal.kernel.portlet.bridges.mvc.MVCActionCommand"/>
+  </service>
+  <implementation class="com.boi.liferay.dms.assignment.portlet.AssignmentRoleUserAction"/>
+</scr:component>

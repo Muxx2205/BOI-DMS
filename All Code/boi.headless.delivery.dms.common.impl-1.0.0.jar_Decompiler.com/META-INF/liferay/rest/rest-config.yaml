@@ -1,0 +1,9 @@
+apiDir: "../boi-headless-delivery-dms-common-api/src/main/java"
+apiPackagePath: "boi.headless.delivery.dms.common"
+application:
+    baseURI: "/boi-headless-delivery-dms-common"
+    className: "BoiHeadlessDeliveryDmsCommonApplication"
+    name: "BoiHeadlessDeliveryDmsCommon"
+author: "sharma.abhishek"
+clientDir: "../boi-headless-delivery-dms-common-client/src/main/java"
+testDir: "../boi-headless-delivery-dms-common-test/src/testIntegration/java"

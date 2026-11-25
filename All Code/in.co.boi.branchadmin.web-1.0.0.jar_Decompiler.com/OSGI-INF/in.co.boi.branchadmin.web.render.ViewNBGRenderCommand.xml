@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="in.co.boi.branchadmin.web.render.ViewNBGRenderCommand">
+  <property name="javax.portlet.name" type="String" value="in_co_boi_branchadmin_web_BranchAdminWebPortlet"/>
+  <property name="mvc.command.name" type="String" value="/view-nbg"/>
+  <service>
+    <provide interface="com.liferay.portal.kernel.portlet.bridges.mvc.MVCRenderCommand"/>
+  </service>
+  <implementation class="in.co.boi.branchadmin.web.render.ViewNBGRenderCommand"/>
+</scr:component>

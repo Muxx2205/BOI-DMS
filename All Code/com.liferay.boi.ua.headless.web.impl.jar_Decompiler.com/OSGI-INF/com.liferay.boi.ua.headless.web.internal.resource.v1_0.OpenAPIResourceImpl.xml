@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.liferay.boi.ua.headless.web.internal.resource.v1_0.OpenAPIResourceImpl">
+  <properties entry="OSGI-INF/liferay/rest/v1_0/openapi.properties"/>
+  <service>
+    <provide interface="com.liferay.boi.ua.headless.web.internal.resource.v1_0.OpenAPIResourceImpl"/>
+  </service>
+  <reference name="_openAPIResource" interface="com.liferay.portal.vulcan.resource.OpenAPIResource" field="_openAPIResource"/>
+  <implementation class="com.liferay.boi.ua.headless.web.internal.resource.v1_0.OpenAPIResourceImpl"/>
+</scr:component>

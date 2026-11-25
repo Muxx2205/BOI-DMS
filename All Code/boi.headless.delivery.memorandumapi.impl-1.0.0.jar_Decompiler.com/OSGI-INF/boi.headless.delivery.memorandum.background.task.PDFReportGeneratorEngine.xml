@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="boi.headless.delivery.memorandum.background.task.PDFReportGeneratorEngine" immediate="true" activate="activate" modified="activate" configuration-pid="boi.headless.delivery.memorandum.configuration.PSRSConfiguration">
+  <property name="background.task.executor.class.name" type="String" value="boi.headless.delivery.memorandum.background.task.PDFReportGeneratorEngine"/>
+  <service>
+    <provide interface="com.liferay.portal.kernel.backgroundtask.BackgroundTaskExecutor"/>
+  </service>
+  <reference name="_dlAppService" interface="com.liferay.document.library.kernel.service.DLAppService" field="_dlAppService"/>
+  <reference name="_dtoConverterRegistry" interface="com.liferay.portal.vulcan.dto.converter.DTOConverterRegistry" field="_dtoConverterRegistry"/>
+  <reference name="_objectEntryManagerRegistry" interface="com.liferay.object.rest.manager.v1_0.ObjectEntryManagerRegistry" field="_objectEntryManagerRegistry"/>
+  <implementation class="boi.headless.delivery.memorandum.background.task.PDFReportGeneratorEngine"/>
+</scr:component>

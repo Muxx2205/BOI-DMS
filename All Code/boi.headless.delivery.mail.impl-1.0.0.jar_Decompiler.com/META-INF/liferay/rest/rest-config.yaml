@@ -1,0 +1,9 @@
+apiDir: "../boi-headless-delivery-mail-api/src/main/java"
+apiPackagePath: "boi.headless.delivery.mail"
+application:
+    baseURI: "/boi-headless-delivery-mail"
+    className: "BoiHeadlessDeliveryMailApplication"
+    name: "BoiHeadlessDeliveryMail"
+author: "sharma.abhishek"
+clientDir: "../boi-headless-delivery-mail-client/src/main/java"
+testDir: "../boi-headless-delivery-mail-test/src/testIntegration/java"

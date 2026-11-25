@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.liferay.object.delete.portlet.ObjectEntryDeleteSchedularJob" immediate="true" activate="activate" modified="activate" configuration-pid="com.boi.headless.rest.common.application.BOIWorkflowConfiguation">
+  <property name="dispatch.task.executor.name" type="String" value="ObjectEntryDeleteSchedularJob"/>
+  <property name="dispatch.task.executor.type" type="String" value="ObjectEntryDeleteSchedularJob"/>
+  <service>
+    <provide interface="com.liferay.dispatch.executor.DispatchTaskExecutor"/>
+  </service>
+  <reference name="_dtoConverterRegistry" interface="com.liferay.portal.vulcan.dto.converter.DTOConverterRegistry" field="_dtoConverterRegistry"/>
+  <reference name="_kaleoTaskInstanceTokenLocalService" interface="com.liferay.portal.workflow.kaleo.service.KaleoTaskInstanceTokenLocalService" field="_kaleoTaskInstanceTokenLocalService"/>
+  <reference name="_objectEntryManagerRegistry" interface="com.liferay.object.rest.manager.v1_0.ObjectEntryManagerRegistry" field="_objectEntryManagerRegistry"/>
+  <reference name="_workflowInstanceLinkLocalService" interface="com.liferay.portal.kernel.service.WorkflowInstanceLinkLocalService" field="_workflowInstanceLinkLocalService"/>
+  <reference name="_workflowInstanceManager" interface="com.liferay.portal.kernel.workflow.WorkflowInstanceManager" field="_workflowInstanceManager"/>
+  <reference name="_workflowTaskManager" interface="com.liferay.portal.kernel.workflow.WorkflowTaskManager" field="_workflowTaskManager"/>
+  <implementation class="com.liferay.object.delete.portlet.ObjectEntryDeleteSchedularJob"/>
+</scr:component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="boi.headless.delivery.dms.common.internal.jaxrs.application.BoiHeadlessDeliveryDmsCommonApplication">
+  <property name="liferay.jackson" type="String" value="false"/>
+  <property name="osgi.jaxrs.application.base" type="String" value="/boi-headless-delivery-dms-common"/>
+  <property name="osgi.jaxrs.extension.select" type="String" value="(osgi.jaxrs.name=Liferay.Vulcan)"/>
+  <property name="osgi.jaxrs.name" type="String" value="BoiHeadlessDeliveryDmsCommon"/>
+  <service>
+    <provide interface="javax.ws.rs.core.Application"/>
+  </service>
+  <implementation class="boi.headless.delivery.dms.common.internal.jaxrs.application.BoiHeadlessDeliveryDmsCommonApplication"/>
+</scr:component>

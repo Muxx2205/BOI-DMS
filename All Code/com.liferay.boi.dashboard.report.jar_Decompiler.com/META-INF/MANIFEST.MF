@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: boi-dashboard-report
+Bundle-SymbolicName: com.liferay.boi.dashboard.report
+Bundle-Version: 1.0.0
+Created-By: 17.0.12 (Eclipse Adoptium)
+Import-Package: com.liferay.dispatch.executor,com.liferay.dispatch.mod
+ el,com.liferay.object.model,com.liferay.object.service,com.liferay.pe
+ tra.sql.dsl,com.liferay.petra.sql.dsl.expression,com.liferay.petra.sq
+ l.dsl.query,com.liferay.portal.kernel.dao.jdbc,com.liferay.portal.ker
+ nel.log,com.liferay.portal.kernel.model,com.liferay.portal.kernel.ser
+ vice,com.liferay.portal.kernel.workflow,java.io,java.lang,java.lang.i
+ nvoke,java.sql,java.util,javax.ws.rs,javax.ws.rs.core,javax.xml.parse
+ rs,javax.xml.xpath,org.w3c.dom,org.xml.sax
+Javac-Debug: on
+Javac-Deprecation: off
+Javac-Encoding: Cp1252
+Liferay-Configuration-Path: /configuration
+Private-Package: com.liferay.boi.dashboard.report.application
+Provide-Capability: osgi.service;objectClass:List<String>="com.liferay
+ .dispatch.executor.DispatchTaskExecutor";uses:="com.liferay.dispatch.
+ executor",osgi.service;objectClass:List<String>="javax.ws.rs.core.App
+ lication";uses:="javax.ws.rs.core"
+Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.compo
+ nent)(version>=1.4.0)(!(version>=2.0.0)))",osgi.ee;filter:="(&(osgi.e
+ e=JavaSE)(version=17))"
+Service-Component: OSGI-INF/com.liferay.boi.dashboard.report.applicati
+ on.BoiDashboardReportApplication.xml,OSGI-INF/com.liferay.boi.dashboa
+ rd.report.application.ObjectEntryApproveSchedularJob.xml
+Tool: Bnd-6.4.0.202211291949
+

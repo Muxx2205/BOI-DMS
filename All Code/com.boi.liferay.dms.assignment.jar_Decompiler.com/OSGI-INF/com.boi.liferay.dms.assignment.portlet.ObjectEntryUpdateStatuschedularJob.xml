@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.boi.liferay.dms.assignment.portlet.ObjectEntryUpdateStatuschedularJob" immediate="true" activate="activate" modified="activate" configuration-pid="com.boi.liferay.dms.assignment.portlet.RolesAllowToAssignment">
+  <property name="dispatch.task.executor.name" type="String" value="ObjectEntryUpdateStatuschedularJob"/>
+  <property name="dispatch.task.executor.type" type="String" value="ObjectEntryUpdateStatuschedularJob"/>
+  <service>
+    <provide interface="com.liferay.dispatch.executor.DispatchTaskExecutor"/>
+  </service>
+  <implementation class="com.boi.liferay.dms.assignment.portlet.ObjectEntryUpdateStatuschedularJob"/>
+</scr:component>

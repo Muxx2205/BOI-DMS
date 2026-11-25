@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.boi.web.users.department.action.UsersDepartmentAction" activate="activate" modified="activate" configuration-pid="com.boi.headless.rest.common.application.BOIWorkflowConfiguation">
+  <property name="javax.portlet.name" type="String" value="com_boi_web_users_department_UsersDepartmentPortlet"/>
+  <property name="mvc.command.name" type="String" value="saveIt"/>
+  <service>
+    <provide interface="com.liferay.portal.kernel.portlet.bridges.mvc.MVCActionCommand"/>
+  </service>
+  <implementation class="com.boi.web.users.department.action.UsersDepartmentAction"/>
+</scr:component>

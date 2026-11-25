@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="boi.headless.delivery.spa.internal.resource.v1_0.factory.KCCJansamarthFormResourceFactoryImpl">
+  <property name="resource.locator.key" type="String" value="/boi-headless-delivery-spa/v1.0/KCCJansamarthForm"/>
+  <service>
+    <provide interface="boi.headless.delivery.spa.resource.v1_0.KCCJansamarthFormResource$Factory"/>
+  </service>
+  <reference name="_companyLocalService" interface="com.liferay.portal.kernel.service.CompanyLocalService" field="_companyLocalService"/>
+  <reference name="_componentServiceObjects" interface="boi.headless.delivery.spa.resource.v1_0.KCCJansamarthFormResource" scope="prototype_required" field="_componentServiceObjects"/>
+  <reference name="_defaultPermissionCheckerFactory" interface="com.liferay.portal.kernel.security.permission.PermissionCheckerFactory" field="_defaultPermissionCheckerFactory"/>
+  <reference name="_expressionConvert" interface="com.liferay.portal.odata.filter.ExpressionConvert" target="(result.class.name=com.liferay.portal.kernel.search.filter.Filter)" field="_expressionConvert"/>
+  <reference name="_filterParserProvider" interface="com.liferay.portal.odata.filter.FilterParserProvider" field="_filterParserProvider"/>
+  <reference name="_groupLocalService" interface="com.liferay.portal.kernel.service.GroupLocalService" field="_groupLocalService"/>
+  <reference name="_resourceActionLocalService" interface="com.liferay.portal.kernel.service.ResourceActionLocalService" field="_resourceActionLocalService"/>
+  <reference name="_resourcePermissionLocalService" interface="com.liferay.portal.kernel.service.ResourcePermissionLocalService" field="_resourcePermissionLocalService"/>
+  <reference name="_roleLocalService" interface="com.liferay.portal.kernel.service.RoleLocalService" field="_roleLocalService"/>
+  <reference name="_sortParserProvider" interface="com.liferay.portal.odata.sort.SortParserProvider" field="_sortParserProvider"/>
+  <reference name="_userLocalService" interface="com.liferay.portal.kernel.service.UserLocalService" field="_userLocalService"/>
+  <implementation class="boi.headless.delivery.spa.internal.resource.v1_0.factory.KCCJansamarthFormResourceFactoryImpl"/>
+</scr:component>

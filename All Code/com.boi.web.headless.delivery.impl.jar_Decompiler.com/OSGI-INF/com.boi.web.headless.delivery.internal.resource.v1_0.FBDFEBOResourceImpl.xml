@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.boi.web.headless.delivery.internal.resource.v1_0.FBDFEBOResourceImpl" activate="activate" modified="activate" configuration-pid="com.boi.headless.rest.common.application.BOIWorkflowConfiguation com.boi.headless.rest.common.mail.MailConfiguration">
+  <properties entry="OSGI-INF/liferay/rest/v1_0/fbdfebo.properties"/>
+  <service scope="prototype">
+    <provide interface="com.boi.web.headless.delivery.resource.v1_0.FBDFEBOResource"/>
+  </service>
+  <reference name="_ddmExpressionFactory" interface="com.liferay.dynamic.data.mapping.expression.DDMExpressionFactory" field="_ddmExpressionFactory"/>
+  <reference name="_dlAppService" interface="com.liferay.document.library.kernel.service.DLAppService" field="_dlAppService"/>
+  <reference name="_dtoConverterRegistry" interface="com.liferay.portal.vulcan.dto.converter.DTOConverterRegistry" field="_dtoConverterRegistry"/>
+  <reference name="_objectDefinitionLocalService" interface="com.liferay.object.service.ObjectDefinitionLocalService" field="_objectDefinitionLocalService"/>
+  <reference name="_objectEntryLocalService" interface="com.liferay.object.service.ObjectEntryLocalService" field="_objectEntryLocalService"/>
+  <reference name="_objectEntryManagerRegistry" interface="com.liferay.object.rest.manager.v1_0.ObjectEntryManagerRegistry" field="_objectEntryManagerRegistry"/>
+  <reference name="_objectFieldLocalService" interface="com.liferay.object.service.ObjectFieldLocalService" field="_objectFieldLocalService"/>
+  <reference name="_objectFieldSettingLocalService" interface="com.liferay.object.service.ObjectFieldSettingLocalService" field="_objectFieldSettingLocalService"/>
+  <reference name="_portal" interface="com.liferay.portal.kernel.util.Portal" field="_portal"/>
+  <reference name="_userLocalService" interface="com.liferay.portal.kernel.service.UserLocalService" field="_userLocalService"/>
+  <reference name="_workflowInstanceManager" interface="com.liferay.portal.kernel.workflow.WorkflowInstanceManager" field="_workflowInstanceManager"/>
+  <reference name="_workflowTaskManager" interface="com.liferay.portal.kernel.workflow.WorkflowTaskManager" field="_workflowTaskManager"/>
+  <implementation class="com.boi.web.headless.delivery.internal.resource.v1_0.FBDFEBOResourceImpl"/>
+</scr:component>

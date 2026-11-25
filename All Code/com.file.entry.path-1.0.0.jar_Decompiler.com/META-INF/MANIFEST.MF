@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: FileEntryPath
+Bundle-SymbolicName: com.file.entry.path
+Bundle-Version: 1.0.0
+Created-By: 17.0.12 (Oracle Corporation)
+Export-Package: com.file.entry.path.constants;version="1.0.0"
+Import-Package: com.liferay.document.library.kernel.model,com.liferay.
+ document.library.kernel.service,com.liferay.object.model,com.liferay.
+ object.service,com.liferay.portal.kernel.json,com.liferay.portal.kern
+ el.log,com.liferay.portal.kernel.portlet.bridges.mvc,com.liferay.port
+ al.kernel.repository.model,com.liferay.portal.kernel.service,com.life
+ ray.portal.kernel.util,java.io,java.lang,java.lang.invoke,java.nio.fi
+ le,java.util,javax.portlet,javax.servlet,javax.servlet.http
+Javac-Debug: on
+Javac-Deprecation: off
+Javac-Encoding: Cp1252
+Private-Package: com.file.entry.path.portlet,content
+Provide-Capability: osgi.service;objectClass:List<String>="javax.portl
+ et.Portlet";uses:="javax.portlet",liferay.language.resources;bundle.s
+ ymbolic.name="com.file.entry.path";resource.bundle.base.name="content
+ .Language";module.only=true
+Require-Capability: osgi.extender;filter:="(&(osgi.extender=jsp.taglib
+ )(uri=http://java.sun.com/jsp/jstl/core))",osgi.extender;filter:="(&(
+ osgi.extender=jsp.taglib)(uri=http://java.sun.com/portlet_2_0))",osgi
+ .extender;filter:="(&(osgi.extender=jsp.taglib)(uri=http://liferay.co
+ m/tld/aui))",osgi.extender;filter:="(&(osgi.extender=jsp.taglib)(uri=
+ http://liferay.com/tld/portlet))",osgi.extender;filter:="(&(osgi.exte
+ nder=jsp.taglib)(uri=http://liferay.com/tld/theme))",osgi.extender;fi
+ lter:="(&(osgi.extender=jsp.taglib)(uri=http://liferay.com/tld/ui))",
+ osgi.extender;filter:="(&(osgi.extender=osgi.component)(version>=1.4.
+ 0)(!(version>=2.0.0)))",osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1
+ 7))"
+Service-Component: OSGI-INF/com.file.entry.path.portlet.FileEntryPathP
+ ortlet.xml
+Tool: Bnd-6.4.0.202211291949
+

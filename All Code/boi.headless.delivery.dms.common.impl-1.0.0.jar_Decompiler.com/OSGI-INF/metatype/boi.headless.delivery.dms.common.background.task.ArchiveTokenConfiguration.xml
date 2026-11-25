@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" localization="boi.headless.delivery.dms.common.background.task.ArchiveTokenConfiguration">
+  <OCD name="Archive token configuration" id="boi.headless.delivery.dms.common.background.task.ArchiveTokenConfiguration">
+    <AD name="Token URL" id="TokenURL" cardinality="0" required="false" type="String"/>
+    <AD name="Grant type" id="grantType" cardinality="0" required="false" type="String"/>
+    <AD name="Boi DMSClient id" id="boiDMSClientId" cardinality="0" required="false" type="String"/>
+    <AD name="Boi DMSSecret" id="boiDMSSecret" cardinality="0" required="false" type="String"/>
+    <AD name="Archive dashboard1 client id" id="archiveDashboard1ClientId" cardinality="0" required="false" type="String"/>
+    <AD name="Archive dashboard1 secret" id="archiveDashboard1Secret" cardinality="0" required="false" type="String"/>
+    <AD name="Branch digitilization client id" id="branchDigitilizationClientId" cardinality="0" required="false" type="String"/>
+    <AD name="Branch digitilization secret" id="branchDigitilizationSecret" cardinality="0" required="false" type="String"/>
+  </OCD>
+  <Designate pid="boi.headless.delivery.dms.common.background.task.ArchiveTokenConfiguration">
+    <Object ocdref="boi.headless.delivery.dms.common.background.task.ArchiveTokenConfiguration"/>
+  </Designate>
+</metatype:MetaData>

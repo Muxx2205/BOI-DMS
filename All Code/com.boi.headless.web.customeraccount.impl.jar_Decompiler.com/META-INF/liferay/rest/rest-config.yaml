@@ -1,0 +1,7 @@
+apiDir: "../customer-account-headless-delivery-api/src/main/java"
+apiPackagePath: "com.boi.headless.web.customeraccount"
+application:
+    baseURI: "/customer-account-headless-delivery"
+    className: "CustomerAccountHeadlessDeliveryApplication"
+    name: "CustomerAccountHeadlessDelivery"
+author: "sumant.chaubey" 

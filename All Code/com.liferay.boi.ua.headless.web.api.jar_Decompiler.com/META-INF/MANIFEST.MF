@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1765370951155
+Bundle-ManifestVersion: 2
+Bundle-Name: boi-headless-ua-web-api
+Bundle-SymbolicName: com.liferay.boi.ua.headless.web.api
+Bundle-Version: 1.0.0
+Created-By: 11.0.24 (Oracle Corporation)
+Export-Package: com.liferay.boi.ua.headless.web.dto.v1_0;uses:="com.fa
+ sterxml.jackson.annotation,com.liferay.petra.function,com.liferay.por
+ tal.kernel.json,com.liferay.portal.vulcan.graphql.annotation,io.swagg
+ er.v3.oas.annotations.media,javax.validation.constraints,javax.xml.bi
+ nd.annotation";version="1.0.0",com.liferay.boi.ua.headless.web.resour
+ ce.v1_0;uses:="com.liferay.boi.ua.headless.web.dto.v1_0,com.liferay.p
+ ortal.kernel.model,com.liferay.portal.kernel.search,com.liferay.porta
+ l.kernel.search.filter,com.liferay.portal.kernel.service,com.liferay.
+ portal.odata.filter,com.liferay.portal.odata.sort,com.liferay.portal.
+ vulcan.accept.language,com.liferay.portal.vulcan.batch.engine.resourc
+ e,com.liferay.portal.vulcan.multipart,javax.servlet.http,javax.ws.rs.
+ core";version="1.0.0"
+Import-Package: com.fasterxml.jackson.annotation,com.liferay.boi.ua.he
+ adless.web.dto.v1_0,com.liferay.petra.function,com.liferay.petra.stri
+ ng,com.liferay.portal.kernel.json,com.liferay.portal.kernel.model,com
+ .liferay.portal.kernel.search,com.liferay.portal.kernel.search.filter
+ ,com.liferay.portal.kernel.service,com.liferay.portal.kernel.util,com
+ .liferay.portal.odata.filter,com.liferay.portal.odata.sort,com.lifera
+ y.portal.vulcan.accept.language,com.liferay.portal.vulcan.batch.engin
+ e.resource,com.liferay.portal.vulcan.graphql.annotation,com.liferay.p
+ ortal.vulcan.multipart,com.liferay.portal.vulcan.util,io.swagger.v3.o
+ as.annotations.media,java.io,java.lang,java.lang.invoke,java.util,jav
+ a.util.function,javax.servlet.http,javax.validation.constraints,javax
+ .ws.rs.core,javax.xml.bind.annotation
+Javac-Debug: on
+Javac-Deprecation: off
+Javac-Encoding: Cp1252
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=11))"
+Tool: Bnd-5.2.0.202010142003
+

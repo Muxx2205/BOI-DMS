@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" localization="boi.headless.delivery.dms.common.background.task.FeboDashboardConfiguration">
+  <OCD name="Febo dashboard configuration" id="boi.headless.delivery.dms.common.background.task.FeboDashboardConfiguration">
+    <AD name="Febo object definition id" id="FeboObjectDefinitionId" cardinality="0" required="false" type="Long"/>
+    <AD name="Blue print type of remittance" id="BluePrintTypeOfRemittance" cardinality="0" required="false" type="String"/>
+    <AD name="Type of remittance field name" id="TypeOfRemittanceFieldName" cardinality="0" required="false" type="String"/>
+    <AD name="Type of remittance names" id="TypeOfRemittanceNames" cardinality="0" required="false" type="String"/>
+    <AD name="Blue print stage" id="BluePrintStage" cardinality="0" required="false" type="String"/>
+    <AD name="Stage field name" id="StageFieldName" cardinality="0" required="false" type="String"/>
+    <AD name="Stage value" id="StageValue" cardinality="0" required="false" type="String"/>
+    <AD name="Hide migrated count" id="hideMigratedCount" cardinality="0" required="false" type="Boolean"/>
+    <AD name="Parent org id" id="parentOrgId" cardinality="0" required="false" type="Long"/>
+  </OCD>
+  <Designate pid="boi.headless.delivery.dms.common.background.task.FeboDashboardConfiguration">
+    <Object ocdref="boi.headless.delivery.dms.common.background.task.FeboDashboardConfiguration"/>
+  </Designate>
+</metatype:MetaData>

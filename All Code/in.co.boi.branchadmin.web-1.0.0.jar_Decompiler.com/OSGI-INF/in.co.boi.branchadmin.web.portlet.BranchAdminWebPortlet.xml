@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="in.co.boi.branchadmin.web.portlet.BranchAdminWebPortlet" immediate="true" configuration-pid="in.co.boi.branchadmin.web.config.ParentSetupConfiguration">
+  <property name="javax.portlet.name" type="String" value="in_co_boi_branchadmin_web_BranchAdminWebPortlet"/>
+  <property name="javax.portlet.display-name" type="String" value="Branch Admin"/>
+  <property name="javax.portlet.init-param.template-path" type="String" value="/"/>
+  <property name="javax.portlet.init-param.view-template" type="String" value="/branch-admin.jsp"/>
+  <property name="javax.portlet.security-role-ref" type="String" value="power-user,user"/>
+  <service>
+    <provide interface="javax.portlet.Portlet"/>
+  </service>
+  <implementation class="in.co.boi.branchadmin.web.portlet.BranchAdminWebPortlet"/>
+</scr:component>

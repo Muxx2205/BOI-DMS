@@ -1,0 +1,71 @@
+openapi: 3.0.1
+info:
+  title: "BoiHeadlessDeliveryMail"
+  version: v1.0
+  description: "BoiHeadlessDeliveryMail REST API"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+
+paths:
+  /send-boi-mail:
+    post:
+      operationId: sendBOIMail
+      tags:
+        - BOIEmail
+      parameters:
+        - name: set
+          in: query
+          required: true
+          description: ""
+          schema:
+            type: integer
+            example: 10
+      requestBody:        
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                key:
+                  type: string
+                name:
+                  type: string
+              example:
+                key: "12345"
+                name: "Abhishek Sharma"
+          application/xml:
+            schema:
+              type: object
+              properties:
+                key:
+                  type: string
+                name:
+                  type: string
+              example:
+                key: "12345"
+                name: "Abhishek Sharma"
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BOIHeadlessResponse'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BOIHeadlessResponse'
+
+components:
+  schemas:
+    BOIHeadlessResponse:
+      type: object
+      properties:
+        responseId:
+          type: integer
+        responseStatus:
+          type: string
+      example:
+        responseId: 1001
+        responseStatus: "SUCCESS"

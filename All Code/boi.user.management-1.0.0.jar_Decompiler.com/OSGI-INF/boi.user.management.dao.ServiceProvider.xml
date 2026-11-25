@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="boi.user.management.dao.ServiceProvider" immediate="true">
+  <service>
+    <provide interface="boi.user.management.dao.ServiceProvider"/>
+  </service>
+  <reference name="DLAppService" interface="com.liferay.document.library.kernel.service.DLAppService" bind="setDLAppService"/>
+  <implementation class="boi.user.management.dao.ServiceProvider"/>
+</scr:component>

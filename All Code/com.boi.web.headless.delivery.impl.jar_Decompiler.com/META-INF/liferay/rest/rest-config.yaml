@@ -1,0 +1,8 @@
+apiDir: "../boi-headless-delivery-web-api/src/main/java"
+apiPackagePath: "com.boi.web.headless.delivery"
+application:
+    baseURI: "/boi-headless-delivery-web"
+    className: "BoiHeadlessDeliveryWebApplication"
+    name: "BoiHeadlessDeliveryWeb"
+author: "sumant.chaubey"
+ 

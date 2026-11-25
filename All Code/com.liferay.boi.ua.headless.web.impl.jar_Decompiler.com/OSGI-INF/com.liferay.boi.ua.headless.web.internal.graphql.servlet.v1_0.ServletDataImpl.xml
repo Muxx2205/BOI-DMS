@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.liferay.boi.ua.headless.web.internal.graphql.servlet.v1_0.ServletDataImpl" activate="activate">
+  <service>
+    <provide interface="com.liferay.portal.vulcan.graphql.servlet.ServletData"/>
+  </service>
+  <reference name="_folderResourceComponentServiceObjects" interface="com.liferay.boi.ua.headless.web.resource.v1_0.FolderResource" scope="prototype_required" field="_folderResourceComponentServiceObjects"/>
+  <implementation class="com.liferay.boi.ua.headless.web.internal.graphql.servlet.v1_0.ServletDataImpl"/>
+</scr:component>

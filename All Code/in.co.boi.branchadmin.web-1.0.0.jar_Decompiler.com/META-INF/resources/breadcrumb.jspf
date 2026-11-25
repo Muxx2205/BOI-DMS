@@ -1,0 +1,36 @@
+
+<%@ page import="com.liferay.portal.kernel.util.ParamUtil" %>
+
+<%
+    String mvcPath = ParamUtil.getString(request, "mvcPath", "/organization/view.jsp");
+    String currentPage = "NBG Organizations";
+
+    if (mvcPath.contains("add-nbg")) {
+        currentPage = "Add NBG Organization";
+    } else if (mvcPath.contains("edit-nbg")) {
+        currentPage = "Edit NBG Organization";
+    } else if (mvcPath.contains("list")) {
+        currentPage = "Organizations";
+    }
+%>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb mb-3">
+    <li class="breadcrumb-item">
+      <a href="<%= themeDisplay.getURLHome() %>">Home</a>
+    </li>
+    <li class="breadcrumb-item">
+    <portlet:renderURL var="organization">
+                 <portlet:param name="mvcPath" value="/branch-admin.jsp" />
+               </portlet:renderURL>
+      <a href="<%=organization%>">
+        Organizations
+      </a>
+    </li>
+    <c:if test="<%= !currentPage.equals(\"Organizations\") %>">
+      <li class="breadcrumb-item active" aria-current="page">
+        <%= currentPage %>
+      </li>
+    </c:if>
+  </ol>
+</nav>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" localization="com.liferay.boi.ua.headless.web.internal.resource.configuration.UAFileUploadConfiguration">
+  <OCD name="UAFile upload configuration" id="com.liferay.boi.ua.headless.web.internal.resource.configuration.UAFileUploadConfiguration">
+    <AD name="Is active" id="isActive" cardinality="0" required="false" default="false" type="Boolean"/>
+    <AD name="Parent folder id" id="parentFolderId" cardinality="0" required="false" type="Integer"/>
+    <AD name="File1 size" id="file1Size" cardinality="0" required="false" type="Integer"/>
+    <AD name="File2 size" id="file2Size" cardinality="0" required="false" type="Integer"/>
+    <AD name="File3 size" id="file3Size" cardinality="0" required="false" type="Integer"/>
+    <AD name="File4 size" id="file4Size" cardinality="0" required="false" type="Integer"/>
+    <AD name="File5 size" id="file5Size" cardinality="0" required="false" type="Integer"/>
+    <AD name="File6 size" id="file6Size" cardinality="0" required="false" type="Integer"/>
+    <AD name="File7 size" id="file7Size" cardinality="0" required="false" type="Integer"/>
+    <AD name="File8 size" id="file8Size" cardinality="0" required="false" type="Integer"/>
+    <AD name="File9 size" id="file9Size" cardinality="0" required="false" type="Integer"/>
+    <AD name="File10 size" id="file10Size" cardinality="0" required="false" type="Integer"/>
+  </OCD>
+  <Designate pid="com.liferay.boi.ua.headless.web.internal.resource.configuration.UAFileUploadConfiguration">
+    <Object ocdref="com.liferay.boi.ua.headless.web.internal.resource.configuration.UAFileUploadConfiguration"/>
+  </Designate>
+</metatype:MetaData>
